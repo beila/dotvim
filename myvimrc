@@ -42,6 +42,55 @@ nmap <leader>a <Esc>:Ack!
 " http://sontek.net/turning-vim-into-a-modern-python-ide#id18
 " call :MakeGreen('my args')
 
+" http://stevelosh.com/blog/2010/09/coming-home-to-vim/#important-vimrc-lines
+set nocompatible
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+set encoding=utf-8
+set scrolloff=3
+set autoindent
+set showcmd
+set wildmenu
+set wildmode=full
+set ttyfast
+set ruler
+set backspace=indent,eol,start
+set laststatus=2
+set relativenumber
+set undofile
+
+set ignorecase
+set smartcase
+set gdefault
+set incsearch
+set showmatch
+set hlsearch
+nnoremap <leader><Backspace> :noh<cr>
+
+set wrap
+set textwidth=79
+set formatoptions=qcron1
+
+nnoremap j gj
+nnoremap k gk
+
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+
+au FocusLost * :wa
+
+" http://stevelosh.com/blog/2010/09/coming-home-to-vim/#using-the-leader
+nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
+
+" http://stevelosh.com/blog/2010/09/coming-home-to-vim/#quicker-escaping
+inoremap jj <ESC>
+
+" 내 설정!
 map <leader>g :Gstatus<CR>
 
 colorscheme torte
