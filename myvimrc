@@ -1,0 +1,51 @@
+" Pathogen
+" http://sontek.net/turning-vim-into-a-modern-python-ide#id1
+filetype off
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+" Window Splits
+" http://sontek.net/turning-vim-into-a-modern-python-ide#id4
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+" Task lists
+" http://sontek.net/turning-vim-into-a-modern-python-ide#id6
+map <leader>td <Plug>TaskList
+
+" Revision History
+" http://sontek.net/turning-vim-into-a-modern-python-ide#id7
+map <leader>u :GundoToggle<CR>
+
+" Syntax Highlighting and Validation
+" http://sontek.net/turning-vim-into-a-modern-python-ide#id8
+syntax on	" syntax highlighing
+filetype on	" try to detect filetypes
+filetype plugin indent on	" enable loading indent file for filetype
+
+" File Browser
+" http://sontek.net/turning-vim-into-a-modern-python-ide#id14
+map <leader>n :NERDTreeToggle<CR>
+
+" Searching
+" http://sontek.net/turning-vim-into-a-modern-python-ide#id16
+nmap <leader>a <Esc>:Ack!
+
+" Integration with Git
+" http://sontek.net/turning-vim-into-a-modern-python-ide#id17
+" TODO 다음 줄을 statusline에 추가하자.
+" %{fugitive@statusline()}
+
+" Test Integration
+" http://sontek.net/turning-vim-into-a-modern-python-ide#id18
+" call :MakeGreen('my args')
+
+map <leader>gs :Gstatus<CR>
+map <leader>ga :Gwrite<CR>
+map <leader>gd :Gdiff<CR>
+map <leader>gc :Gcommit<CR>
+
+colorscheme torte
+
