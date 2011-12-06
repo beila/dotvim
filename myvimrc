@@ -42,10 +42,7 @@ nmap <leader>a <Esc>:Ack!
 " http://sontek.net/turning-vim-into-a-modern-python-ide#id18
 " call :MakeGreen('my args')
 
-map <leader>gs :Gstatus<CR>
-map <leader>ga :Gwrite<CR>
-map <leader>gd :Gdiff<CR>
-map <leader>gc :Gcommit<CR>
+map <leader>g :Gstatus<CR>
 
 colorscheme torte
 
