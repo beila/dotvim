@@ -22,6 +22,9 @@
 [submodule "bundle/git"]
 	path = bundle/git
 	url = https://github.com/tpope/vim-git.git
-[submodule "bundle/makegreen"]
-	path = bundle/makegreen
-	url = https://github.com/reinh/vim-makegreen
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "bundle/YankRing"]
+	path = bundle/YankRing
+	url = https://github.com/vim-scripts/YankRing.vim.git

@@ -38,10 +38,6 @@ nmap <leader>a <Esc>:Ack!
 " TODO 다음 줄을 statusline에 추가하자.
 " %{fugitive@statusline()}
 
-" Test Integration
-" http://sontek.net/turning-vim-into-a-modern-python-ide#id18
-" call :MakeGreen('my args')
-
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#important-vimrc-lines
 set nocompatible
 
@@ -89,6 +85,10 @@ nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#quicker-escaping
 inoremap jj <ESC>
+
+" http://stevelosh.com/blog/2010/09/coming-home-to-vim/#yankring
+nnoremap <silent> <F3> :YRShow<cr>
+inoremap <silent> <F3> <ESC>:YRShow<cr>
 
 " 내 설정!
 map <leader>g :Gstatus<CR>
