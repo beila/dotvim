@@ -51,7 +51,7 @@ set scrolloff=3
 set autoindent
 set showcmd
 set wildmenu
-set wildmode=full
+set wildmode=list,full
 set ttyfast
 set ruler
 set backspace=indent,eol,start
@@ -91,7 +91,10 @@ nnoremap <silent> <F3> :YRShow<cr>
 inoremap <silent> <F3> <ESC>:YRShow<cr>
 
 " 내 설정!
+
+" :help fugitive
 map <leader>g :Gstatus<CR>
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 colorscheme torte
 
