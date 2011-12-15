@@ -93,7 +93,7 @@ inoremap <silent> <F3> <ESC>:YRShow<cr>
 " 내 설정!
 
 " :help fugitive
-map <leader>g :Gstatus<CR>
+map <leader>s :Gstatus<CR>
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 colorscheme torte
