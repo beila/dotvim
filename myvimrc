@@ -32,6 +32,7 @@ map <leader>n :NERDTreeToggle<CR>
 " Searching
 " http://sontek.net/turning-vim-into-a-modern-python-ide#id16
 nmap <leader>a <Esc>:Ack!
+nmap <leader>f <Esc>:Ack!<cword><Enter>
 
 " Integration with Git
 " http://sontek.net/turning-vim-into-a-modern-python-ide#id17
@@ -90,11 +91,22 @@ inoremap jj <ESC>
 nnoremap <silent> <F3> :YRShow<cr>
 inoremap <silent> <F3> <ESC>:YRShow<cr>
 
+" http://www.vim.org/scripts/script.php?script_id=2179
+source $HOME/.vim/srcexplrc
+
+"
 " 내 설정!
 
 " :help fugitive
 map <leader>s :Gstatus<CR>
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
+" :help ins-completion
+inoremap ^] ^X^]
+inoremap ^F ^X^F
+inoremap ^D ^X^D
+inoremap ^L ^X^L
+
 colorscheme torte
 
+set modeline
