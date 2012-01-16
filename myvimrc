@@ -13,7 +13,7 @@ map <c-h> <c-w>h
 
 " Task lists
 " http://sontek.net/turning-vim-into-a-modern-python-ide#id6
-map <leader>td <Plug>TaskList
+map <leader>l <Plug>TaskList
 
 " Revision History
 " http://sontek.net/turning-vim-into-a-modern-python-ide#id7
@@ -106,6 +106,8 @@ inoremap ^] ^X^]
 inoremap ^F ^X^F
 inoremap ^D ^X^D
 inoremap ^L ^X^L
+
+map <leader>c ]c
 
 colorscheme torte
 

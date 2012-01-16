@@ -1,10 +1,11 @@
 "http://www.vim.org/scripts/script.php?script_id=2179
 
 " // The switch of the Source Explorer 
-nmap <leader>i :SrcExplToggle<CR>:set hlsearch<CR>
+nmap <leader>i :SrcExplToggle<CR>:set hlsearch<CR><CR>
 
 " // Set the height of Source Explorer window 
-let g:SrcExpl_winHeight = 8 
+"let g:SrcExpl_winHeight = 8 
+let g:SrcExpl_winHeight = 5
 
 " // Set 100 ms for refreshing the Source Explorer 
 let g:SrcExpl_refreshTime = 100 
