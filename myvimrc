@@ -1,8 +1,7 @@
-" Pathogen
-" http://sontek.net/turning-vim-into-a-modern-python-ide#id1
-filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+let mapleader = "'"
+
+source <sfile>:h/pathogen.vimrc
+runtime! vimrc/*.vimrc
 
 " Window Splits
 " http://sontek.net/turning-vim-into-a-modern-python-ide#id4
@@ -11,33 +10,11 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
-" Task lists
-" http://sontek.net/turning-vim-into-a-modern-python-ide#id6
-map <leader>l <Plug>TaskList
-
-" Revision History
-" http://sontek.net/turning-vim-into-a-modern-python-ide#id7
-map <leader>u :GundoToggle<CR>
-
 " Syntax Highlighting and Validation
 " http://sontek.net/turning-vim-into-a-modern-python-ide#id8
 syntax on	" syntax highlighing
 filetype on	" try to detect filetypes
 filetype plugin indent on	" enable loading indent file for filetype
-
-" File Browser
-" http://sontek.net/turning-vim-into-a-modern-python-ide#id14
-map <leader>n :NERDTreeToggle<CR>
-
-" Searching
-" http://sontek.net/turning-vim-into-a-modern-python-ide#id16
-nmap <leader>a <Esc>:Ack!
-nmap <leader>f <Esc>:Ack!<cword><Enter>
-
-" Integration with Git
-" http://sontek.net/turning-vim-into-a-modern-python-ide#id17
-" TODO 다음 줄을 statusline에 추가하자.
-" %{fugitive@statusline()}
 
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#important-vimrc-lines
 set nocompatible
@@ -82,24 +59,32 @@ vnoremap <F1> <ESC>
 au FocusLost * :wa
 
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#using-the-leader
-nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
+"nnoremap <leader>ev <C-w><C-s>:e $MYVIMRC<cr>
+nnoremap <leader>ev :split +e $MYVIMRC<cr>
+
+" http://www.bestofvim.com/tip/auto-reload-your-vimrc/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+bestOfVim+%28%3Abest+of+Vim%29
+augroup reload_vimrc " {
+    autocmd!
+    autocmd BufWritePost $MYVIMRC source $MYVIMRC
+    autocmd BufWritePost ~/.vim/* source $MYVIMRC
+augroup END " }
 
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#quicker-escaping
-inoremap jj <ESC>
+inoremap hh <ESC>hh
+inoremap jj <ESC>jj
+inoremap kk <ESC>kk
+inoremap lll <ESC>lll
 
-" http://stevelosh.com/blog/2010/09/coming-home-to-vim/#yankring
-nnoremap <silent> <F3> :YRShow<cr>
-inoremap <silent> <F3> <ESC>:YRShow<cr>
+" http://www.bestofvim.com/tip/better-commit-messages/
+autocmd FileType gitcommit setlocal spell
 
-" http://www.vim.org/scripts/script.php?script_id=2179
-source $HOME/.vim/srcexplrc
+" http://www.reddit.com/r/vim/comments/ybx2x/whats_he_using_to_make_spaces_or_tabs_looks_like/c5u7kq3
+set list
+set listchars=tab:▸\ ,trail:⋅,nbsp:⋅
 
-"
-" 내 설정!
-
-" :help fugitive
-map <leader>s :Gstatus<CR>
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+""""""""""""
+" 내 설정! "
+""""""""""""
 
 " :help ins-completion
 inoremap ^] ^X^]
@@ -108,7 +93,11 @@ inoremap ^D ^X^D
 inoremap ^L ^X^L
 
 map <leader>c ]c
+map <leader>; :update<Enter>:cn<Enter>
+map <leader>, :update<Enter>:cp<Enter>
 
 colorscheme torte
+set colorcolumn=100
 
 set modeline
+set vb t_vb=

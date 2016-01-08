@@ -1,0 +1,18 @@
+set makeprg=ant\ -emacs
+map <F11> :wall<Enter>:cclose<Enter>:AsyncMake debug<Enter>
+map <M-F11> :wall<Enter>:cclose<Enter>:AsyncMake clean newrun<Enter>
+set tags+=~/src/androidtags
+set complete-=t
+
+set cfu=VjdeCompletionFun
+let g:vjde_lib_path="bin/classes:".$ANDROID_HOME."/platforms/android-16/android.jar:".substitute(glob("chipset-libs/*.jar"),"\n",":","g")
+let g:vjde_javadoc_path=$ANDROID_HOME."/docs/reference/"
+let g:vjde_out_path="bin"
+let g:vjde_src_path="src"
+let g:vjde_cfu_java_dot=1
+let g:vjde_preview_gui=1
+if has('gui_running')
+    let g:vjde_completion_key='<c-space>'
+else
+    let g:vjde_completion_key='<c-l>'
+endif
