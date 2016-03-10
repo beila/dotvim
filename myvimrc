@@ -22,7 +22,7 @@ set nocompatible
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set expandtab
+set noexpandtab
 
 set encoding=utf-8
 set scrolloff=3
@@ -80,7 +80,8 @@ autocmd FileType gitcommit setlocal spell
 
 " http://www.reddit.com/r/vim/comments/ybx2x/whats_he_using_to_make_spaces_or_tabs_looks_like/c5u7kq3
 set list
-set listchars=tab:▸\ ,trail:⋅,nbsp:⋅
+"set listchars=tab:▸\ ,trail:⋅,nbsp:⋅
+set listchars=tab:\ \ ,trail:⋅,nbsp:⋅
 
 """"""""""""
 " 내 설정! "
@@ -100,4 +101,4 @@ colorscheme torte
 set colorcolumn=100
 
 set modeline
-set vb t_vb=
+set novb t_vb=
