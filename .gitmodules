@@ -73,9 +73,6 @@
 [submodule "bundle/vimshell"]
 	path = bundle/vimshell
 	url = https://github.com/Shougo/vimshell.git
-[submodule "bundle/Vim-JDE"]
-	path = bundle/Vim-JDE
-	url = https://github.com/vim-scripts/Vim-JDE.git
 [submodule "bundle/vim-misc"]
 	path = bundle/vim-misc
 	url = https://github.com/xolox/vim-misc.git
