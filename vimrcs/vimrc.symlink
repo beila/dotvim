@@ -1,0 +1,5 @@
+source myvimrc
+'source macvimrc
+source ubunturc
+source gVimPortablerc
+source androidrc

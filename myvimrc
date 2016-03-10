@@ -1,7 +1,7 @@
 let mapleader = "'"
 
 source <sfile>:h/pathogen.vimrc
-runtime! vimrc/*.vimrc
+runtime! vimrcs/*.vimrc
 
 " Window Splits
 " http://sontek.net/turning-vim-into-a-modern-python-ide#id4
