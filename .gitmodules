@@ -82,3 +82,6 @@
 [submodule "bundle/matchit.zip"]
 	path = bundle/matchit.zip
 	url = https://github.com/vim-scripts/matchit.zip.git
+[submodule "bundle/vim-gitgutter"]
+	path = bundle/vim-gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git

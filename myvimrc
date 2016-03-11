@@ -83,6 +83,9 @@ set list
 "set listchars=tab:▸\ ,trail:⋅,nbsp:⋅
 set listchars=tab:\ \ ,trail:⋅,nbsp:⋅
 
+" https://github.com/airblade/vim-gitgutter#getting-started
+set updatetime=250
+
 """"""""""""
 " 내 설정! "
 """"""""""""
