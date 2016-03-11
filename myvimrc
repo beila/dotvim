@@ -96,12 +96,14 @@ inoremap ^F ^X^F
 inoremap ^D ^X^D
 inoremap ^L ^X^L
 
-map <leader>c ]c
-map <leader>; :update<Enter>:cn<Enter>
-map <leader>, :update<Enter>:cp<Enter>
+map [q :update<Enter>:cp<Enter>
+map ]q :update<Enter>:cn<Enter>
+map [Q :update<Enter>:cfirst<Enter>
+map ]Q :update<Enter>:clast<Enter>
 
 colorscheme torte
 set colorcolumn=100
 
 set modeline
 set novb t_vb=
+set number
