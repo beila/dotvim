@@ -1,2 +1,2 @@
-set makeprg=bash\ -c\ \"cd\ build/linux/debug;make\ report_unit_tests\ -j8&&tests/bin/report_unit_tests\"
-map <F11> :TagbarClose<Enter>:wa<Enter>:make<Enter>:copen<Enter><Enter>:TagbarOpen<Enter>
+set makeprg=bash\ -c\ \"cd\ build/linux/debug;make\ report_unit_tests\ -j8&&tests/bin/report_unit_tests\ --gtest_filter=\"CrashReportLogFormatterTest.*\"\"
+map <F11> :wa<Enter>:make<Enter>:TagbarClose<Enter>:copen<Enter><Enter>

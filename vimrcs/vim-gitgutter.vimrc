@@ -8,6 +8,3 @@ nmap <Leader>ha <Plug>GitGutterStageHunk
 nmap <Leader>hu <Plug>GitGutterRevertHunk
 nmap <leader>d <Plug>GitGutterPreviewHunk
 let g:gitgutter_map_keys = 0
-
-" https://github.com/airblade/vim-gitgutter#extra-arguments-for-git-diff
-let g:gitgutter_diff_args = '--word-diff=color'
