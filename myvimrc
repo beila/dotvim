@@ -34,7 +34,7 @@ set ttyfast
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
-set relativenumber
+"set relativenumber
 set undofile
 
 set ignorecase
@@ -106,4 +106,4 @@ set colorcolumn=100
 
 set modeline
 set novb t_vb=
-set number
+"set number
