@@ -1,6 +1,6 @@
 let mapleader = "'"
 
-source <sfile>:h/pathogen.vimrc
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 runtime! vimrcs/*.vimrc
 
 " Window Splits
