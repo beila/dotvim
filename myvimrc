@@ -1,6 +1,8 @@
 let mapleader = "'"
 
 runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
 runtime! vimrcs/*.vimrc
 
 " Window Splits
