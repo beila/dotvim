@@ -66,9 +66,15 @@
 	path = bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
 	branch = master
+[submodule "bundle/SrcExpl"]
+	path = bundle/SrcExpl
+	url = http://github.com/vim-scripts/SrcExpl
+	branch = master
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic
+	branch = master
 [submodule "bundle/syntastic-extras"]
 	path = bundle/syntastic-extras
 	url = https://github.com/myint/syntastic-extras.git
+	branch = master
