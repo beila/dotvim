@@ -88,6 +88,9 @@ set listchars=tab:\ \ ,trail:⋅,nbsp:⋅
 " https://github.com/airblade/vim-gitgutter#getting-started
 set updatetime=250
 
+" http://stackoverflow.com/a/1552193
+autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
+
 """"""""""""
 " 내 설정! "
 """"""""""""

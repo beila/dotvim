@@ -1,5 +1,7 @@
 " Searching
 " http://sontek.net/turning-vim-into-a-modern-python-ide#id16
-nmap <leader>a <Esc>:Ack!
-nmap <leader>f <Esc>:Ack!<cword><Enter>
+" + http://superuser.com/a/255054
+nmap <leader>a :Ack!
+nmap <leader>f :let @/=expand('\<<cword>\>')<Enter>:Ack!"\b<cword>\b"<Enter>
 
+nmap <leader>m :let @/=expand('\<<cword>\>')<Enter>:Ack! --cmake --make --python --shell "\bD?<cword>\b"<Enter>
