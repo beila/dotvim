@@ -4,4 +4,5 @@
 nmap <leader>a :Ack!
 nmap <leader>f :let @/='\<'.expand('<cword>').'\>'<Enter>:Ack!"\b<cword>\b"<Enter>
 
+nmap <leader>c :let @/='\<'.expand('<cword>').'\>'<Enter>:Ack!--cc --cpp "\b<cword>\b"<Enter>
 nmap <leader>m :let @/='\<D\?\zs'.expand('<cword>').'\>'<Enter>:Ack! --cmake --make --python --shell "\bD?<cword>\b"<Enter>
