@@ -98,3 +98,8 @@
 	url = https://github.com/myint/syntastic-extras.git
 	branch = master
 	ignore = all
+[submodule "bundle/cmake.vim"]
+	path = bundle/cmake.vim
+	url = https://github.com/jalcine/cmake.vim.git
+	branch = master
+	ignore = all

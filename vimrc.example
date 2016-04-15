@@ -1,6 +1,7 @@
-source ~/.vim/myvimrc
-source ~/.vim/macvimrc
-source ~/.vim/ubunturc
-source ~/.vim/gVimPortablerc
-source ~/.vim/androidrc
-source ~/.vim/ignitionrc
+"source ~/.vim/myvimrc
+"source ~/.vim/macvimrc
+"source ~/.vim/ubunturc
+"source ~/.vim/gVimPortablerc
+"source ~/.vim/androidrc
+"source ~/.vim/ignitionrc
+"source ~/.vim/ignition-ps4.vimrc
