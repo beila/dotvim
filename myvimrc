@@ -81,12 +81,9 @@ inoremap lll <ESC>lll
 autocmd FileType gitcommit setlocal spell
 
 " http://www.reddit.com/r/vim/comments/ybx2x/whats_he_using_to_make_spaces_or_tabs_looks_like/c5u7kq3
-set list
+"set list
 "set listchars=tab:▸\ ,trail:⋅,nbsp:⋅
-set listchars=tab:\ \ ,trail:⋅,nbsp:⋅
-
-" https://github.com/airblade/vim-gitgutter#getting-started
-set updatetime=250
+"set listchars=tab:\ \ ,trail:⋅,nbsp:⋅
 
 " http://stackoverflow.com/a/1552193
 autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
