@@ -1,6 +1,6 @@
 "set makeprg=bash\ -c\ \"cd\ build/linux/debug;make\ -j8\ core_unit_tests\ report_unit_tests&&tests/bin/core_unit_tests&&tests/bin/report_unit_tests\"
-set makeprg=bash\ -c\ \"cd\ build/linux/debug;make\ javascript_unit_tests\ -j8&&tests/bin/javascript_unit_tests\"
-"set makeprg=bash\ -c\ \"cd\ build/linux/debug;make\ report_unit_tests\ -j8&&tests/bin/report_unit_tests\ --gtest_filter=\"Crash*.*\"\"
+"set makeprg=bash\ -c\ \"cd\ build/linux/debug;make\ javascript_unit_tests\ -j8&&tests/bin/javascript_unit_tests\"
+set makeprg=bash\ -c\ \"cd\ build/linux/debug;make\ report_unit_tests\ -j8&&tests/bin/report_unit_tests\ --gtest_filter=\"Crash*.*\"\"
 map <F11> :wa<Enter>:make<Enter>:TagbarClose<Enter>:copen<Enter><Enter>
 map <F10> :wa<Enter>:!rm cscope*; cscope-indexer -r<Enter><Enter>:cscope reset<Enter><Enter>
 source <sfile>:h/cmake.vimrc
