@@ -93,3 +93,13 @@
 	url = https://github.com/jalcine/cmake.vim.git
 	branch = master
 	ignore = all
+[submodule "bundle/syntastic"]                                      
+       path = bundle/syntastic                                      
+       url = https://github.com/scrooloose/syntastic.git            
+       branch = master                                              
+       ignore = all                                                 
+[submodule "bundle/syntastic-extras"]                               
+       path = bundle/syntastic-extras                               
+       url = https://github.com/myint/syntastic-extras.git          
+       branch = master                                              
+       ignore = all                                                 
