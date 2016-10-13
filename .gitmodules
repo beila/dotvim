@@ -98,3 +98,8 @@
 	url = https://github.com/Shougo/neomru.vim.git
 	branch = master
 	ignore = all
+[submodule "bundle/vimproc"]
+	path = bundle/vimproc
+	url = https://github.com/Shougo/vimproc.vim.git
+	branch = master
+	ignore = all
