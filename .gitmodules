@@ -13,11 +13,6 @@
 	url = https://github.com/sjl/gundo.vim.git
 	branch = master
 	ignore = all
-[submodule "bundle/command-t"]
-	path = bundle/command-t
-	url = https://github.com/wincent/Command-T.git
-	branch = master
-	ignore = all
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/vim-scripts/The-NERD-tree.git
@@ -93,13 +88,13 @@
 	url = https://github.com/jalcine/cmake.vim.git
 	branch = master
 	ignore = all
-[submodule "bundle/syntastic"]                                      
-       path = bundle/syntastic                                      
-       url = https://github.com/scrooloose/syntastic.git            
-       branch = master                                              
-       ignore = all                                                 
-[submodule "bundle/syntastic-extras"]                               
-       path = bundle/syntastic-extras                               
-       url = https://github.com/myint/syntastic-extras.git          
-       branch = master                                              
-       ignore = all                                                 
+[submodule "bundle/unite"]
+	path = bundle/unite
+	url = https://github.com/Shougo/unite.vim.git
+	branch = master
+	ignore = all
+[submodule "bundle/neomru"]
+	path = bundle/neomru
+	url = https://github.com/Shougo/neomru.vim.git
+	branch = master
+	ignore = all
