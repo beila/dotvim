@@ -51,8 +51,8 @@ set wrap
 set textwidth=79
 set formatoptions=qcron1
 
-nnoremap j gj
-nnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up> gk
 
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
