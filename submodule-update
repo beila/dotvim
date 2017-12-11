@@ -1,3 +1,0 @@
-#!/bin/bash
-git submodule init\
-&& git submodule foreach --recursive 'bash -c "git fetch origin && git reset --hard origin/HEAD"'
