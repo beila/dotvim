@@ -110,5 +110,5 @@ colorscheme torte
 set colorcolumn=100
 
 set modeline
-set novb t_vb=
+set vb t_vb=
 "set number
