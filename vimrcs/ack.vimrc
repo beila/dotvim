@@ -8,8 +8,8 @@ nmap <leader>a :Ack!
 nmap <leader>f :let @/='\<'.expand('<cword>').'\>'<Enter>:Ack!-L "\b<cword>\b"<Enter>
 nmap <leader>F :let @/='\<'.expand('<cword>').'\>'<Enter>:Ack!-L "\b
 
-nmap <leader>x :let @/='\<'.expand('<cword>').'\>'<Enter>:Ack!-L -tc -tcpp "\b<cword>\b"<Enter>
-nmap <leader>X :let @/='\<'.expand('<cword>').'\>'<Enter>:Ack!-L -tc -tcpp "\b
+nmap <leader>x :let @/='\<'.expand('<cword>').'\>'<Enter>:Ack!-L "\b<cword>\b" --no-ignore<Enter>
+nmap <leader>X :let @/='\<'.expand('<cword>').'\>'<Enter>:Ack!-L --no-ignore "\b
 
 nmap <leader>c :let @/='\<'.expand('<cword>').'\>'<Enter>:Ack!-L -tc -tcpp --ignore-dir=tests --ignore-dir=thirdparty --ignore-dir=generated --ignore-dir=build --ignore-dir=install "\b<cword>\b"<Enter>
 nmap <leader>C :let @/='\<'.expand('<cword>').'\>'<Enter>:Ack!-L -tc -tcpp --ignore-dir=tests --ignore-dir=thirdparty --ignore-dir=generated --ignore-dir=build --ignore-dir=install "\b
