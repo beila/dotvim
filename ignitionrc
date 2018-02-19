@@ -1,3 +1,5 @@
+set noexpandtab
+
 "set makeprg=bash\ -c\ \"cd\ build/linux/debug;make\ -j8\ core_unit_tests\ report_unit_tests&&tests/bin/core_unit_tests&&tests/bin/report_unit_tests\"
 "set makeprg=bash\ -c\ \"cd\ build/linux/debug;make\ javascript_unit_tests\ -j8&&tests/bin/javascript_unit_tests\"
 set makeprg=bash\ -c\ \"cd\ build/linux/debug;make\ report_unit_tests\ -j8&&tests/bin/report_unit_tests\ --gtest_filter=\"Crash*.*\"\"
