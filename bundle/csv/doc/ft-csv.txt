@@ -92,6 +92,9 @@ works differently. For instructions on installing this file, type
 :help add-local-help |add-local-help| inside Vim. For a screenshot, of
 how the plugin can be used, see http://www.256bit.org/~chrisbra/csv.gif
 
+It will make use of the |+vartabs| feature for tab delimited files to arrange
+them automatically.
+
 ==============================================================================
 2. Installation						*csv-installation*
 
@@ -874,6 +877,11 @@ leftaligned.
 
 Note: Each row must contain exactly as many fields as columns.
 
+This command is available as default plugin. To disable this feature, set the 
+ variable g:csv_disable_table_command to 1: >
+
+    :let g:csv_disable_table_command = 1
+<
                                                             *:CSVAddColumn*
 3.24 Add new empty columns                                   *AddColumn_CSV*
 --------------------------

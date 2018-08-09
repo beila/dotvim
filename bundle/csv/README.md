@@ -9,6 +9,8 @@ This is a filetype plugin for CSV files. It was heavily influenced by
 the [Vim Wiki Tip667](http://vim.wikia.com/wiki/VimTip667), though it
 works differently. 
 
+It will make use of the [vartab](http://vimhelp.appspot.com/options.txt.html#'vartabstop') feature for tab delimited files.
+
 ![Screenshot](http://www.256bit.org/~chrisbra/csv.gif)
 
 # Table of Contents
@@ -936,6 +938,12 @@ Set the variable g:csv_table_leftalign=1 if you want the columns to be
 leftaligned.
 
 Note: Each row must contain exactly as many fields as columns.
+
+This command is available as default plugin. To disable this feature, set the 
+variable g:csv_disable_table_command to 1:
+```vim
+    :let g:csv_disable_table_command = 1
+```
 
 ## Add new empty columns
 
