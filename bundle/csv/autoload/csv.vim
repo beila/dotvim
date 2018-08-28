@@ -319,7 +319,7 @@ fu! csv#SearchColumn(arg) "{{{3
         call csv#Warn("There exists no column " . colnr)
         return 1
     endif
-    let @/ = csv#GetPat(colnr, maxcolnr, '\%('.pat. '\)', 1)
+    let @/ = csv#GetPat(colnr, maxcolnr, '\%(.\{-\}'.pat. '\)', 1)
     try
         " force redraw, so that the search pattern isn't shown
         exe "norm! n\<c-l>"
@@ -1590,7 +1590,7 @@ fu! csv#MaxColumn(list) "{{{3
         endfor
         let result = sort(result, s:csv_numeric_sort ? 'n' : 'csv#CSVSortValues')
         let ind = len(result) > 9 ? 9 : len(result)
-        if has_key(get(csv#, 'additional', {}), 'distinct') && s:additional['distinct']
+        if has_key(get(s:, 'additional', {}), 'distinct') && s:additional['distinct']
           if exists("*uniq")
             let result=uniq(result)
           else
@@ -1607,7 +1607,7 @@ endfu
 fu! csv#CountColumn(list) "{{{3
     if empty(a:list)
         return 0
-    elseif has_key(get(csv#, 'additional', {}), 'distinct') && s:additional['distinct']
+    elseif has_key(get(s:, 'additional', {}), 'distinct') && s:additional['distinct']
       if exists("*uniq")
         return len(uniq(sort(a:list)))
       else
