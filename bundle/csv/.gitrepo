@@ -7,5 +7,5 @@
 	remote = https://github.com/chrisbra/csv.vim.git
 	branch = master
 	commit = 7aa17f00a6cc96b9c9c364c6786c24f97c04605b
-	parent = 3ad01613a1af747b86b17f25b8c99f5f1fe812f8
+	parent = e148044f0cf41044c6b50096d57cd48fed259f15
 	cmdver = 0.3.1
