@@ -11,6 +11,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	parent = 7832e8c55be4aeb9956e8ee188e78faf284cb071
 ||||||| merged common ancestors
 	parent = bd470e0c17f60d4ab66f8ce60e391968c5efc14e
@@ -32,4 +33,9 @@
 =======
 	parent = 0105f08ec8f9f0da027d7caccab8552df454e378
 >>>>>>> 24e6d93cb8356f5b282e7603e82cc37f6bc2ad02
+||||||| merged common ancestors
+	parent = 0105f08ec8f9f0da027d7caccab8552df454e378
+=======
+	parent = 24e6d93cb8356f5b282e7603e82cc37f6bc2ad02
+>>>>>>> 5cf42dedec81a77f7497dc70477c88ec82105a5d
 	cmdver = 0.3.1
