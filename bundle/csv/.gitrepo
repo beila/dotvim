@@ -7,5 +7,41 @@
 	remote = https://github.com/chrisbra/csv.vim.git
 	branch = master
 	commit = 502f03ddb1b519d7581d9119b2cdaef59c0bf32a
+<<<<<<< HEAD
 	parent = 5cf42dedec81a77f7497dc70477c88ec82105a5d
+||||||| merged common ancestors
+	parent = 24e6d93cb8356f5b282e7603e82cc37f6bc2ad02
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+	parent = 7832e8c55be4aeb9956e8ee188e78faf284cb071
+||||||| merged common ancestors
+	parent = bd470e0c17f60d4ab66f8ce60e391968c5efc14e
+=======
+	parent = 313a377ceb410a821d95dffa8dc3bde2449581c9
+>>>>>>> ef254801cce32b3ab73d6317e64ac2d2397be6e2
+||||||| merged common ancestors
+	parent = 313a377ceb410a821d95dffa8dc3bde2449581c9
+=======
+	parent = ef254801cce32b3ab73d6317e64ac2d2397be6e2
+>>>>>>> b9a3387666ee29114caf81537f0fcfe116dab79a
+||||||| merged common ancestors
+	parent = ef254801cce32b3ab73d6317e64ac2d2397be6e2
+=======
+	parent = b9a3387666ee29114caf81537f0fcfe116dab79a
+>>>>>>> 0105f08ec8f9f0da027d7caccab8552df454e378
+||||||| merged common ancestors
+	parent = b9a3387666ee29114caf81537f0fcfe116dab79a
+=======
+	parent = 0105f08ec8f9f0da027d7caccab8552df454e378
+>>>>>>> 24e6d93cb8356f5b282e7603e82cc37f6bc2ad02
+||||||| merged common ancestors
+	parent = 0105f08ec8f9f0da027d7caccab8552df454e378
+=======
+	parent = 24e6d93cb8356f5b282e7603e82cc37f6bc2ad02
+>>>>>>> 5cf42dedec81a77f7497dc70477c88ec82105a5d
+>>>>>>> 7a9a5390a956a1dcc962e3147a0cf2515be08854
 	cmdver = 0.3.1
