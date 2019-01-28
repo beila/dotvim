@@ -8,6 +8,11 @@
 	branch = master
 	commit = 502f03ddb1b519d7581d9119b2cdaef59c0bf32a
 <<<<<<< HEAD
+	parent = 5cf42dedec81a77f7497dc70477c88ec82105a5d
+||||||| merged common ancestors
+	parent = 24e6d93cb8356f5b282e7603e82cc37f6bc2ad02
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -38,4 +43,5 @@
 =======
 	parent = 24e6d93cb8356f5b282e7603e82cc37f6bc2ad02
 >>>>>>> 5cf42dedec81a77f7497dc70477c88ec82105a5d
+>>>>>>> 7a9a5390a956a1dcc962e3147a0cf2515be08854
 	cmdver = 0.3.1
