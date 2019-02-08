@@ -1,2 +1,2 @@
 "set guifont=Ubuntu\ Mono\ derivative\ Powerline:10
-let g:ackprg = '/home/hojin/.cargo/bin/rg --vimgrep'
+let g:ackprg = '/usr/bin/rg --vimgrep'
