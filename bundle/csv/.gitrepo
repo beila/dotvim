@@ -6,6 +6,6 @@
 [subrepo]
 	remote = https://github.com/chrisbra/csv.vim.git
 	branch = master
-	commit = 502f03ddb1b519d7581d9119b2cdaef59c0bf32a
-	parent = 5cf42dedec81a77f7497dc70477c88ec82105a5d
+	commit = 66afe781cd3c06e4d9ed7f1ac48fc9cd97de6ef6
+	parent = aa146ed8e25b57990f5b09cde72ba9f98e05b544
 	cmdver = 0.3.1

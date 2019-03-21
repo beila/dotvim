@@ -579,6 +579,7 @@ fu! csv#ColWidth(colnr, ...) "{{{3
     " Internal function
     let width=20 "Fallback (wild guess)
     let tlist=[]
+    let skipfirst=get(g:, 'csv_skipfirst', 0)
 
     if !exists("b:csv_fixed_width_cols")
         if !exists("b:csv_list")
@@ -593,7 +594,7 @@ fu! csv#ColWidth(colnr, ...) "{{{3
                     call csv#Warn('File too large, only checking the first 10000 rows for the width')
                 endif
             endif
-            let b:csv_list=getline(1,last)
+            let b:csv_list=getline(skipfirst+1,last)
             let pat = '^\s*\V'. escape(b:csv_cmt[0], '\\')
             call filter(b:csv_list, 'v:val !~ pat')
             call filter(b:csv_list, '!empty(v:val)')
@@ -1047,9 +1048,10 @@ fu! csv#MoveCol(forward, line, ...) "{{{3
     " direction but still stop at a different position
     " see :h csv-mapping-H
     let colnr=csv#WColumn()
-    let maxcol=csv#MaxColumns()
+    let maxcol=csv#MaxColumns(line('.'))
     let cpos=getpos('.')[2]
     if !exists("b:csv_fixed_width_cols")
+        let curwidth=CSVWidth()
         call search(b:col, 'bc', line('.'))
     endif
     let spos=getpos('.')[2]
@@ -1109,11 +1111,11 @@ fu! csv#MoveCol(forward, line, ...) "{{{3
         call search(pat, 'W')
     elseif a:forward < 0
         if colnr > 0 || cpos == spos
-            call search('.\ze'.pat, 'bWe')
+            call search(pat, 'bWe')
             let stime=localtime()
             while getpos('.')[2] == cpos && csv#Timeout(stime) " make sure loop terminates
                 " cursor didn't move, move cursor one cell to the left
-                norm! h
+                sil! norm! h
                 if colnr > 0
                     call csv#MoveCol(-1, line('.'))
                 else
@@ -1142,7 +1144,9 @@ fu! csv#MoveCol(forward, line, ...) "{{{3
         " leave the column (if the next column is shorter)
         if !exists("b:csv_fixed_width_cols")
             let a    = getpos('.')
-            let a[2]+= cpos-spos
+            if CSVWidth() == curwidth
+                let a[2]+= cpos-spos
+            endif
         else
             let a    = getpos('.')
             let a[2] = cpos
@@ -1153,7 +1157,9 @@ fu! csv#MoveCol(forward, line, ...) "{{{3
         " Move to the correct screen column
         if !exists("b:csv_fixed_width_cols")
             let a    = getpos('.')
-            let a[2]+= cpos-spos
+            if CSVWidth() == curwidth
+                let a[2]+= cpos-spos
+            endif
         else
             let a    = getpos('.')
             let a[2] = cpos
