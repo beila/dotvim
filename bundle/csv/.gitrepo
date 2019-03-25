@@ -9,6 +9,7 @@
 	commit = 66afe781cd3c06e4d9ed7f1ac48fc9cd97de6ef6
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	parent = f316d0e7bee39052993435c15346c9941ff4929b
 ||||||| merged common ancestors
 	parent = 70edfd8a4dcec3f98b6ff1470e019fb3fbe4613a
@@ -20,4 +21,9 @@
 =======
 	parent = f9f3ef8b443df9fe96a37480d20792dfcfbc0dbe
 >>>>>>> 615a80dd6ff8b6555a71709a72cbe6fe625764fc
+||||||| merged common ancestors
+	parent = f9f3ef8b443df9fe96a37480d20792dfcfbc0dbe
+=======
+	parent = 615a80dd6ff8b6555a71709a72cbe6fe625764fc
+>>>>>>> 2df7f5c94d741d1e8b02302364b6141f796a33ce
 	cmdver = 0.3.1
