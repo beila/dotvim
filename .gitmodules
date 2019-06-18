@@ -1,6 +1,6 @@
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
-	url = http://github.com/tpope/vim-fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git
 	branch = master
 	ignore = all
 [submodule "bundle/tasklist"]
@@ -75,7 +75,7 @@
 	ignore = all
 [submodule "bundle/SrcExpl"]
 	path = bundle/SrcExpl
-	url = http://github.com/vim-scripts/SrcExpl
+	url = https://github.com/vim-scripts/SrcExpl
 	branch = master
 	ignore = all
 [submodule "bundle/cmake.vim"]
