@@ -98,3 +98,8 @@
 	url = https://github.com/Shougo/vimproc.vim.git
 	branch = master
 	ignore = all
+[submodule "bundle/vim-dirdiff"]
+	path = bundle/vim-dirdiff
+	url = https://github.com/will133/vim-dirdiff.git
+	branch = master
+	ignore = all
