@@ -6,7 +6,9 @@ let g:ackprg = 'rg --vimgrep'
 nmap <leader>a :Ack!
 
 nmap <leader>f :let @/='\<'.expand('<cword>').'\>'<Enter>:Ack!-L "\b<cword>\b"<Enter>
+vmap <leader>f :<C-U>let @/='\<<C-R>*\>'<Enter>:<C-U>Ack!-L "<C-R>*"<Enter>
 nmap <leader>F :let @/='\<'.expand('<cword>').'\>'<Enter>:Ack!-L "\b
 
 nmap <leader>x :let @/='\<'.expand('<cword>').'\>'<Enter>:Ack!-L "\b<cword>\b" --no-ignore<Enter>
+vmap <leader>x :<C-U>let @/='\<<C-R>*\>'<Enter>:<C-U>Ack!-L "<C-R>*" --no-ignore<Enter>
 nmap <leader>X :let @/='\<'.expand('<cword>').'\>'<Enter>:Ack!-L --no-ignore "\b
