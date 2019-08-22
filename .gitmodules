@@ -103,3 +103,6 @@
 	url = https://github.com/will133/vim-dirdiff.git
 	branch = master
 	ignore = all
+[submodule "bundle/typescript-vim"]
+	path = bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
