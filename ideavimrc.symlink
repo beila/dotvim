@@ -1,2 +1,5 @@
 set visualbell
 set hlsearch
+
+" https://github.com/JetBrains/ideavim/wiki/%60ideajoin%60-example
+set ideajoin
