@@ -89,6 +89,10 @@ set nolist
 " http://stackoverflow.com/a/1552193
 autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
 
+" https://stackoverflow.com/a/7078429
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
+
 """"""""""""
 " 내 설정! "
 """"""""""""
