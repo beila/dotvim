@@ -51,6 +51,10 @@ set wrap
 set textwidth=100
 set formatoptions=qcron1
 
+# https://lee-phillips.org/badvim/
+set nobackup
+set nowritebackup
+
 nnoremap <Down> gj
 nnoremap <Up> gk
 
