@@ -2,3 +2,4 @@ map <d-f> <d-f>
 map <d-b> <d-b>
 set guifont=Menlo_Bold_for_Powerline:h14
 "autocmd VimEnter * :macaction performZoom:
+set rtp+=/usr/local/opt/fzf
