@@ -1,6 +1,5 @@
-" https://stackoverflow.com/a/3098685
-:function! SomeCheck()
-:   if filereadable("/usr/local/opt/fzf/plugin/fzf.vim")
-:       runtime! /usr/local/opt/fzf/plugin/fzf.vim
-:   endif
-:endfunction
+map <leader>f :GFiles<Enter>
+map <leader>F :Files<Enter>
+map <leader>b :Buffers<Enter>
+map <leader>; :Commands<Enter>
+map <F8> :BTags<Enter>
