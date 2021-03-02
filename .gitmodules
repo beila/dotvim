@@ -13,11 +13,6 @@
 	url = https://github.com/vim-scripts/The-NERD-tree.git
 	branch = master
 	ignore = all
-[submodule "bundle/ack"]
-	path = bundle/ack
-	url = https://github.com/mileszs/ack.vim.git
-	branch = master
-	ignore = all
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
