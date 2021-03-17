@@ -6,10 +6,12 @@ map <leader>' :BLines<Enter>
 map <leader>t :Tags<Enter>
 map <c-]> :Tags <C-R>=expand("<cword>")<Enter><Enter>
 map <F8> :BTags<Enter>
+map <leader>m :Marks<Enter>
 map <leader>b :History<Enter>
 map <leader>; :History:<Enter>
 map <leader>/ :History/<Enter>
 map <leader>l :BCommits<Enter>
+map <leader>c :Commands<Enter>
 
 " https://github.com/junegunn/fzf.vim#user-content-example-advanced-ripgrep-integration
 function! RipgrepFzf(query, fullscreen)
