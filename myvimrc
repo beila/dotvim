@@ -48,7 +48,7 @@ set showmatch
 set hlsearch
 nnoremap <leader><Backspace> :noh<cr>
 
-set wrap
+set nowrap
 set textwidth=100
 set formatoptions=qcron1
 
@@ -58,6 +58,8 @@ set nowritebackup
 
 nnoremap <Down> gj
 nnoremap <Up> gk
+nnoremap j gj
+nnoremap k gk
 
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
