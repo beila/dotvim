@@ -48,7 +48,7 @@ set showmatch
 set hlsearch
 nnoremap <leader><Backspace> :noh<cr>
 
-set nowrap
+set wrap
 set textwidth=100
 set formatoptions=qcron1
 

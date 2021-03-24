@@ -1,5 +1,7 @@
 map <d-f> <d-f>
 map <d-b> <d-b>
-set guifont=Menlo_Bold_for_Powerline:h14
+"set guifont=Menlo_Bold_for_Powerline:h12
+"set guifont=Ubuntu_Mono_derivative_Powerline:h12
+set guifont=FiraMonoForPowerline-Regular:h12
 "autocmd VimEnter * :macaction performZoom:
 set rtp+=/usr/local/opt/fzf
