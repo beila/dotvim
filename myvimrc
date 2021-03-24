@@ -49,8 +49,9 @@ set hlsearch
 nnoremap <leader><Backspace> :noh<cr>
 
 set wrap
-set textwidth=100
+"set textwidth=100
 set formatoptions=qcron1
+set colorcolumn=10
 
 " https://lee-phillips.org/badvim/
 set nobackup
@@ -118,7 +119,6 @@ map <leader>h :diffoff<Enter>:diffthis<Enter>
 map <leader>H :diffoff<Enter>
 
 colorscheme torte
-set colorcolumn=100
 
 set modeline
 set novisualbell t_vb=
