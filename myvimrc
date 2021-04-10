@@ -52,6 +52,7 @@ set wrap
 "set textwidth=100
 set formatoptions=qcron1
 "set colorcolumn=100
+set linebreak
 
 " https://lee-phillips.org/badvim/
 set nobackup
