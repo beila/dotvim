@@ -52,7 +52,6 @@ set wrap
 "set textwidth=100
 set formatoptions=qcron1
 "set colorcolumn=100
-set linebreak
 
 " https://lee-phillips.org/badvim/
 set nobackup
@@ -89,6 +88,7 @@ inoremap lll <ESC>lll
 
 " http://www.bestofvim.com/tip/better-commit-messages/
 autocmd FileType gitcommit setlocal spell
+autocmd FileType markdown setlocal spell
 
 " http://www.reddit.com/r/vim/comments/ybx2x/whats_he_using_to_make_spaces_or_tabs_looks_like/c5u7kq3
 "set list
@@ -102,6 +102,11 @@ autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<c
 " https://stackoverflow.com/a/7078429
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
+
+" https://www.reddit.com/r/vim/comments/cn20tv/tip_histogrambased_diffs_using_modern_vim/?utm_source=share&utm_medium=web2x&context=3
+if has('nvim-0.3.2') || has("patch-8.1.0360")
+    set diffopt=filler,internal,algorithm:histogram,indent-heuristic
+endif
 
 """"""""""""
 " 내 설정! "
@@ -125,3 +130,9 @@ colorscheme torte
 set modeline
 set novisualbell t_vb=
 "set number
+set linebreak
+
+" :help ft-markdown-plugin
+let g:markdown_folding = 1
+
+set diffopt+=closeoff
