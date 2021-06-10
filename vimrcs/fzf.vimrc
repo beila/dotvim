@@ -13,6 +13,17 @@ map <leader>/ :History/<Enter>
 map <leader>l :BCommits<Enter>
 map <leader>c :Commands<Enter>
 
+" https://github.com/junegunn/fzf.vim#example-rg-command-with-preview-window
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case -- '.<q-args>, 1,
+  \   fzf#vim#with_preview(), <bang>0)
+
+command! -bang -nargs=* Rgi
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case --no-ignore -- '.<q-args>, 1,
+  \   fzf#vim#with_preview(), <bang>0)
+
 " https://github.com/junegunn/fzf.vim#user-content-example-advanced-ripgrep-integration
 function! RipgrepFzf(query, fullscreen)
   let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case %s || true'
@@ -22,12 +33,7 @@ function! RipgrepFzf(query, fullscreen)
   call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
 endfunction
 
-"command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
-
-command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always --smart-case '.<q-args>, 1,
-  \   fzf#vim#with_preview(), <bang>0)
+command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
 " https://github.com/junegunn/fzf.vim#user-content-mappings
 " Insert mode completion
