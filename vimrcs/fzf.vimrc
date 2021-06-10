@@ -1,8 +1,7 @@
 map <leader>F :Files<Enter>
 map <leader>f :GFiles<Enter>
 map <leader>g :Rg <C-R>=expand("<cword>")<Enter><Enter>
-map <leader>G :Rgi <C-R>=expand("<cword>")<Enter><Enter>
-map <leader><c-g> :Rg <C-R>+<Enter>
+map <leader>G :Rg <C-R>+<Enter>
 map <leader>' :BLines<Enter>
 map <leader>t :Tags<Enter>
 map <c-]> :Tags <C-R>=expand("<cword>")<Enter><Enter>
@@ -14,27 +13,18 @@ map <leader>/ :History/<Enter>
 map <leader>l :BCommits<Enter>
 map <leader>c :Commands<Enter>
 
-" https://github.com/junegunn/fzf.vim#example-rg-command-with-preview-window
-command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always --smart-case -- '.<q-args>, 1,
-  \   fzf#vim#with_preview(), <bang>0)
-
-command! -bang -nargs=* Rgi
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always --smart-case --no-ignore -- '.<q-args>, 1,
-  \   fzf#vim#with_preview(), <bang>0)
-
 " https://github.com/junegunn/fzf.vim#user-content-example-advanced-ripgrep-integration
 function! RipgrepFzf(query, fullscreen)
-  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case %s || true'
+  " {q} from reload_command always comes with enclosing quote 'blah'
+  " Thus, https://stackoverflow.com/a/6988363
+  let command_fmt = 'echo %s | xargs rg --column --line-number --no-heading --color=always --smart-case'
   let initial_command = printf(command_fmt, shellescape(a:query))
   let reload_command = printf(command_fmt, '{q}')
   let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
   call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
 endfunction
 
-command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
+command! -nargs=* -bang Rg call RipgrepFzf(<q-args>, <bang>0)
 
 " https://github.com/junegunn/fzf.vim#user-content-mappings
 " Insert mode completion
