@@ -66,7 +66,62 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
-au FocusLost * :wa
+augroup myautocommands
+    au!
+    " http://stackoverflow.com/a/1552193
+    autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
+
+    au FocusLost * :wa
+    " Save every time it goes to normal mode
+    au CursorHold * :update
+
+    " :help CursorHold-example
+    au CursorHold * ++nested call PreviewWord()
+augroup END
+
+func PreviewWord()
+    if &previewwindow			" don't do this in the preview window
+        return
+    endif
+    let w = expand("<cword>")		" get the word under cursor
+    if w =~ '\a'			" if the word contains a letter
+
+        " Delete any existing highlight before showing another tag
+        silent! wincmd P			" jump to preview window
+        if &previewwindow			" if we really get there...
+            match none			" delete existing highlight
+            wincmd p			" back to old window
+        endif
+
+        " Try displaying a matching tag for the word under the cursor
+        try
+            exe "ptag " . w
+        catch
+            return
+        endtry
+
+        silent! wincmd P			" jump to preview window
+        if &previewwindow		" if we really get there...
+            if has("folding")
+                silent! .foldopen		" don't want a closed fold
+            endif
+            call search("$", "b")		" to end of previous line
+            let w = substitute(w, '\\', '\\\\', "")
+            call search('\<\V' . w . '\>')	" position cursor on match
+            " Add a match highlight to the word at this position
+            hi previewWord term=bold ctermbg=green guibg=green
+            exe 'match previewWord "\%' . line(".") . 'l\%' . col(".") . 'c\k*"'
+            wincmd p			" back to old window
+        endif
+    endif
+endfun
+
+" ptag didn't jump to the first one because of
+" https://stackoverflow.com/a/11348063
+set nocscopetag
+
+" https://vim.fandom.com/wiki/Saving_a_file
+map <Esc><Esc> :wa<CR>
 
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#using-the-leader
 "nnoremap <leader>ev <C-w><C-s>:e $MYVIMRC<cr>
@@ -96,9 +151,6 @@ set nolist
 "set listchars=tab:▸\ ,trail:⋅,nbsp:⋅
 "set listchars=tab:\ \ ,trail:⋅,nbsp:⋅
 
-" http://stackoverflow.com/a/1552193
-autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
-
 " https://stackoverflow.com/a/7078429
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
@@ -107,9 +159,6 @@ cmap w!! w !sudo tee > /dev/null %
 if has('nvim-0.3.2') || has("patch-8.1.0360")
     set diffopt=filler,internal,algorithm:histogram,indent-heuristic
 endif
-
-" https://vim.fandom.com/wiki/Saving_a_file
-map <Esc><Esc> :wa<CR>
 
 """"""""""""
 " 내 설정! "
