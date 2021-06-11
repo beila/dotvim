@@ -77,6 +77,8 @@ augroup myautocommands
 
     " :help CursorHold-example
     au CursorHold * ++nested call PreviewWord()
+
+    au BufEnter * :cd %:h | silent! Gcd
 augroup END
 
 func PreviewWord()
