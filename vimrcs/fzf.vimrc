@@ -1,7 +1,8 @@
 map <leader>F :Files<Enter>
 map <leader>f :GFiles<Enter>
 map <leader>g :Rg <C-R>=expand("<cword>")<Enter><Enter>
-map <leader>G :Rg <C-R>+<Enter>
+map <leader>G :Rgi <C-R>=expand("<cword>")<Enter><Enter>
+map <leader><c-g> :Rg <C-R>+<Enter>
 map <leader>' :BLines<Enter>
 map <leader>t :Tags<Enter>
 map <c-]> :Tags <C-R>=expand("<cword>")<Enter><Enter>
@@ -25,6 +26,7 @@ function! RipgrepFzf(query, fullscreen)
 endfunction
 
 command! -nargs=* -bang Rg call RipgrepFzf(<q-args>, <bang>0)
+command! -nargs=* -bang Rgi call RipgrepFzf('--no-ignore '.<q-args>, <bang>0)
 
 " https://github.com/junegunn/fzf.vim#user-content-mappings
 " Insert mode completion
