@@ -71,9 +71,11 @@ augroup myautocommands
     " http://stackoverflow.com/a/1552193
     autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
 
-    au CursorHold,BufLeave,FocusLost * if &filetype != "" | update | else update $HOME/.scratch | endif
+    " https://www.reddit.com/r/vim/comments/g4dhvf/is_there_a_way_to_create_random_file_name_for/fnwyd4j?utm_source=share&utm_medium=web2x&context=3
+    au CursorHold,BufLeave,FocusLost * if &filetype == "" | execute 'update ~/dev/hjdocs/scratches/vim_scratch_' . strftime("%Y%m%d_%H%M") . '.txt' | else | update | endif
 
-    au BufEnter * :cd %:p:h | silent! Gcd
+    "au BufEnter * :cd %:p:h | silent! Gcd
+    au BufRead * :lcd %:p:h | silent! Glcd
 augroup END
 
 " https://vim.fandom.com/wiki/Saving_a_file
