@@ -74,8 +74,8 @@ augroup myautocommands
     " https://www.reddit.com/r/vim/comments/g4dhvf/is_there_a_way_to_create_random_file_name_for/fnwyd4j?utm_source=share&utm_medium=web2x&context=3
     au CursorHold,BufLeave,FocusLost * if &filetype == "" | execute 'update ~/dev/hjdocs/scratches/vim_scratch_' . strftime("%Y%m%d_%H%M") . '.txt' | else | update | endif
 
-    "au BufEnter * :cd %:p:h | silent! Gcd
-    au BufRead * :lcd %:p:h | silent! Glcd
+    au BufEnter * :lcd %:p:h | silent! Glcd
+    "au BufRead * :lcd %:p:h | silent! Glcd
 augroup END
 
 " https://vim.fandom.com/wiki/Saving_a_file
