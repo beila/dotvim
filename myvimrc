@@ -76,6 +76,7 @@ augroup myautocommands
 
     " https://stackoverflow.com/a/38082157
     autocmd BufEnter * :lcd %:p:h | silent! lcd `git rev-parse --show-toplevel`
+    autocmd BufRead  * :lcd %:p:h | silent! lcd `git rev-parse --show-toplevel`
 augroup END
 
 " https://vim.fandom.com/wiki/Saving_a_file
