@@ -1,8 +1,9 @@
 map <leader>F :Files<Enter>
 map <leader>f :GFiles<Enter>
 map <leader>g :Rg <C-R>=expand("<cword>")<Enter><Enter>
-map <leader>G :Rgi <C-R>=expand("<cword>")<Enter><Enter>
+vmap <leader>g "9y:Rg <C-R>9<Enter>
 map <leader><c-g> :Rg <C-R>+<Enter>
+map <leader>G :Rgi <C-R>=expand("<cword>")<Enter><Enter>
 map <leader>' :BLines<Enter>
 map <leader>t :Tags<Enter>
 map <c-]> :Tags <C-R>=expand("<cword>")<Enter><Enter>
