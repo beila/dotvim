@@ -1,6 +1,7 @@
 map <leader>F :Files<Enter>
 map <leader>f :GFiles<Enter>
 map <leader>g :Rg <C-R>=expand("<cword>")<Enter><Enter>
+vmap <leader>g :Rg 
 map <leader>G :Rgi <C-R>=expand("<cword>")<Enter><Enter>
 map <leader><c-g> :Rg <C-R>+<Enter>
 map <leader>' :BLines<Enter>
