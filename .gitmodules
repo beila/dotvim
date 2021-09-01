@@ -107,3 +107,7 @@
 [submodule "bundle/vim-rhubarb"]
 	path = bundle/vim-rhubarb
 	url = https://github.com/tpope/vim-rhubarb.git
+[submodule "bundle/vim-cmake-help"]
+	path = bundle/vim-cmake-help
+	url = https://github.com/bfrg/vim-cmake-help
+	branch = master
