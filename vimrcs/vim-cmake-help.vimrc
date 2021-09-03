@@ -11,5 +11,5 @@ setlocal keywordprg+=:CMakeHelp
 
 augroup vimcmakehelp
     autocmd!
-    autocmd BufEnter CMake*.txt,*.cmake setlocal keywordprg=:CMakeHelp
+    autocmd BufEnter CMake*.txt,*.cmake,CMake\ Help* setlocal keywordprg=:CMakeHelp
 augroup END
