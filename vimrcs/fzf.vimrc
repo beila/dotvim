@@ -14,6 +14,7 @@ map <leader>; :History:<Enter>
 map <leader>/ :History/<Enter>
 map <leader>l :BCommits<Enter>
 map <leader>c :Commands<Enter>
+map <leader><c-m> :Maps<Enter>
 
 " https://github.com/junegunn/fzf.vim#user-content-example-advanced-ripgrep-integration
 function! RipgrepFzf(query, fullscreen)
