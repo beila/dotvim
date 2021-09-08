@@ -77,7 +77,11 @@ augroup myautocommands
     " https://stackoverflow.com/a/38082157
     autocmd BufEnter * :lcd %:p:h | silent! lcd `git rev-parse --show-toplevel`
 
-    autocmd FileType markdown setlocal shiftwidth=2
+    " http://www.bestofvim.com/tip/better-commit-messages/
+    autocmd FileType gitcommit setlocal spell
+    autocmd FileType markdown setlocal spell
+
+    autocmd FileType markdown setlocal shiftwidth=2 softtabstop=2
 augroup END
 
 " https://vim.fandom.com/wiki/Saving_a_file
@@ -93,6 +97,7 @@ augroup reload_vimrc " {
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
     autocmd BufWritePost ~/.vim/* source $MYVIMRC
     autocmd BufWritePost ~/.dotfiles/vim.symlink/* source $MYVIMRC
+    autocmd BufWritePost ~/.dotfiles/vim.symlink/vimrcs/* source $MYVIMRC
 augroup END " }
 
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#quicker-escaping
@@ -100,10 +105,6 @@ inoremap hh <ESC>hh
 inoremap jj <ESC>jj
 inoremap kk <ESC>kk
 inoremap lll <ESC>lll
-
-" http://www.bestofvim.com/tip/better-commit-messages/
-autocmd FileType gitcommit setlocal spell
-autocmd FileType markdown setlocal spell
 
 " http://www.reddit.com/r/vim/comments/ybx2x/whats_he_using_to_make_spaces_or_tabs_looks_like/c5u7kq3
 "set list
