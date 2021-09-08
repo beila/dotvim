@@ -76,6 +76,8 @@ augroup myautocommands
 
     " https://stackoverflow.com/a/38082157
     autocmd BufEnter * :lcd %:p:h | silent! lcd `git rev-parse --show-toplevel`
+
+    autocmd FileType markdown setlocal shiftwidth=2
 augroup END
 
 " https://vim.fandom.com/wiki/Saving_a_file
