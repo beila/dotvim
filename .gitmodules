@@ -63,11 +63,6 @@
 	url = https://github.com/vim-scripts/SrcExpl
 	branch = master
 	ignore = all
-[submodule "bundle/unite"]
-	path = bundle/unite
-	url = https://github.com/Shougo/unite.vim.git
-	branch = master
-	ignore = all
 [submodule "bundle/neomru"]
 	path = bundle/neomru
 	url = https://github.com/Shougo/neomru.vim.git
