@@ -19,3 +19,5 @@ codeartifact
 builderhub
 https
 linux
+wasm
+AVPK
