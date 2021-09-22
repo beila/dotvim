@@ -147,3 +147,5 @@ set linebreak
 
 " :help ft-markdown-plugin
 let g:markdown_folding = 1
+
+set nofixendofline
