@@ -106,3 +106,6 @@
 	path = bundle/vim-cmake-help
 	url = https://github.com/bfrg/vim-cmake-help
 	branch = master
+[submodule "bundle/vim-jinja"]
+	path = bundle/vim-jinja
+	url = https://github.com/lepture/vim-jinja.git
