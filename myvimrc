@@ -72,7 +72,7 @@ augroup myautocommands
     autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
 
     " https://www.reddit.com/r/vim/comments/g4dhvf/is_there_a_way_to_create_random_file_name_for/fnwyd4j?utm_source=share&utm_medium=web2x&context=3
-    autocmd CursorHold,BufLeave,FocusLost * if expand('%') == "" | execute 'update ~/dev/hjdocs/scratches/vim_scratch_' . strftime("%Y%m%d_%H%M") . '.txt' | else | update | endif
+    autocmd CursorHold,BufLeave,FocusLost * if &buftype == "" | if expand('%') == "" | execute 'update ~/dev/hjdocs/scratches/vim_scratch_' . strftime("%Y%m%d_%H%M") . '.txt' | else | update | endif | endif
 
     " https://stackoverflow.com/a/38082157
     autocmd BufEnter * :lcd %:p:h | silent! lcd `git rev-parse --show-toplevel`
