@@ -5,3 +5,11 @@ set idearefactormode=keep
 
 " https://github.com/JetBrains/ideavim/wiki/%60ideajoin%60-example
 set ideajoin
+
+set NERDTree
+map <leader>n :NERDTreeFind<CR>
+runtime! vimrcs/nerdtree.vimrc
+
+let mapleader = "'"
+map <Space> <Leader>
+map <Backspace> <Leader>

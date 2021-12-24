@@ -1,3 +1,5 @@
+set runtimepath+=/usr/local/opt/fzf
+
 map <leader>F :Files<Enter>
 map <leader>f :GFiles<Enter>
 map <leader>g :Rg <C-R>=expand("<cword>")<Enter><Enter>
