@@ -1,3 +1,6 @@
+let mapleader = " "
+map <Backspace> <Leader>
+
 set visualbell
 set hlsearch
 
@@ -6,10 +9,7 @@ set idearefactormode=keep
 " https://github.com/JetBrains/ideavim/wiki/%60ideajoin%60-example
 set ideajoin
 
+" https://github.com/JetBrains/ideavim/wiki/NERDTree-support
 set NERDTree
+" vimrcs/nerdtree.vimrc
 map <leader>n :NERDTreeFind<CR>
-runtime! vimrcs/nerdtree.vimrc
-
-let mapleader = "'"
-map <Space> <Leader>
-map <Backspace> <Leader>
