@@ -109,3 +109,6 @@
 [submodule "bundle/vim-jinja"]
 	path = bundle/vim-jinja
 	url = https://github.com/lepture/vim-jinja.git
+[submodule "bundle/vim-f-hangul"]
+	path = bundle/vim-f-hangul
+	url = https://github.com/johngrib/vim-f-hangul
