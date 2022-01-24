@@ -6,9 +6,11 @@ map <leader>g :Rg <C-R>=expand("<cword>")<Enter><Enter>
 vmap <leader>g "9y:Rg <C-R>9<Enter>
 map <leader><c-g> :Rg <C-R>+<Enter>
 map <leader>G :Rgi <C-R>=expand("<cword>")<Enter><Enter>
+vmap <leader>G "9y:Rgi <C-R>9<Enter>
 map <leader>' :BLines<Enter>
 map <leader>t :Tags<Enter>
 map <c-]> :Tags <C-R>=expand("<cword>")<Enter><Enter>
+vmap <c-]> "9y:Tags <C-R>9<Enter>
 map <F8> :BTags<Enter>
 map <leader>m :Marks<Enter>
 map <leader>b :History<Enter>
@@ -29,8 +31,8 @@ function! RipgrepFzf(query, fullscreen)
   call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
 endfunction
 
-command! -nargs=* -bang Rg call RipgrepFzf(<q-args>, <bang>0)
-command! -nargs=* -bang Rgi call RipgrepFzf('--no-ignore '.<q-args>, <bang>0)
+command! -nargs=* -bang Rg call RipgrepFzf('"'.<q-args>.'"', <bang>0)
+command! -nargs=* -bang Rgi call RipgrepFzf('--no-ignore "'.<q-args>.'"', <bang>0)
 
 " https://github.com/junegunn/fzf.vim#user-content-mappings
 " Insert mode completion
