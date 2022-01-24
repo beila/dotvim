@@ -109,3 +109,6 @@
 [submodule "bundle/vim-jinja"]
 	path = bundle/vim-jinja
 	url = https://github.com/lepture/vim-jinja.git
+[submodule "bundle/ale"]
+	path = bundle/ale
+	url = https://github.com/dense-analysis/ale.git
