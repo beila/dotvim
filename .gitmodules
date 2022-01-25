@@ -112,3 +112,6 @@
 [submodule "bundle/ale"]
 	path = bundle/ale
 	url = https://github.com/dense-analysis/ale.git
+[submodule "bundle/jsonc"]
+	path = bundle/jsonc
+	url = https://github.com/neoclide/jsonc.vim
