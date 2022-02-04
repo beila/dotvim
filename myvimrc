@@ -84,6 +84,8 @@ augroup myautocommands
     autocmd FileType markdown setlocal spell
 
     autocmd FileType markdown setlocal shiftwidth=2 softtabstop=2
+
+    autocmd FileType python setlocal foldmethod=indent
 augroup END
 
 " https://stackoverflow.com/a/37558470
