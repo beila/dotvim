@@ -32,7 +32,7 @@ function! RipgrepFzf(query, fullscreen)
 endfunction
 
 command! -nargs=* -bang Rg call RipgrepFzf('"'.<q-args>.'" -sw', <bang>0)
-command! -nargs=* -bang Rgi call RipgrepFzf('--no-ignore " -sw'.<q-args>.'"', <bang>0)
+command! -nargs=* -bang Rgi call RipgrepFzf('"'.<q-args>.'" --no-ignore -sw', <bang>0)
 
 " https://github.com/junegunn/fzf.vim#user-content-mappings
 " Insert mode completion
