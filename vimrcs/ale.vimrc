@@ -16,3 +16,8 @@ let g:ale_fixers = {
 \       'yapf',
 \    ],
 \}
+
+augroup ale_python
+    autocmd!
+    autocmd FileType python let b:ale_python_mypy_options = '--python-executable venv/bin/python'
+augroup END
