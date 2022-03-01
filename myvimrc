@@ -149,6 +149,7 @@ map ]Q :update<Enter>:clast<Enter>
 map <leader>h :diffoff<Enter>:diffthis<Enter>
 map <leader>H :diffoff<Enter>
 
+set background=dark
 colorscheme torte
 
 set modeline
