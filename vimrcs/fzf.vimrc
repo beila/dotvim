@@ -24,15 +24,15 @@ map <leader><c-m> :Maps<Enter>
 function! RipgrepFzf(query, fullscreen)
   " {q} from reload_command always comes with enclosing quote 'blah'
   " Thus, https://stackoverflow.com/a/6988363
-  let command_fmt = 'echo D?%s | xargs rg --column --line-number --no-heading --color=always --smart-case'
+  let command_fmt = 'echo %s | xargs rg --column --line-number --no-heading --color=always --smart-case'
   let initial_command = printf(command_fmt, shellescape(a:query))
   let reload_command = printf(command_fmt, '{q}')
   let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
   call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
 endfunction
 
-command! -nargs=* -bang Rg call RipgrepFzf('"'.<q-args>.'" -sw', <bang>0)
-command! -nargs=* -bang Rgi call RipgrepFzf('"'.<q-args>.'" --no-ignore -sw', <bang>0)
+command! -nargs=* -bang Rg call RipgrepFzf('"D?'.<q-args>.'" -sw', <bang>0)
+command! -nargs=* -bang Rgi call RipgrepFzf('"D?'.<q-args>.'" --no-ignore -sw', <bang>0)
 
 " https://github.com/junegunn/fzf.vim#user-content-mappings
 " Insert mode completion
