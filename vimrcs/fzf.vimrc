@@ -24,7 +24,7 @@ map <leader><c-m> :Maps<Enter>
 function! RipgrepFzf(query, fullscreen)
   " {q} from reload_command always comes with enclosing quote 'blah'
   " Thus, https://stackoverflow.com/a/6988363
-  let command_fmt = 'echo %s | xargs rg --column --line-number --no-heading --color=always --smart-case'
+  let command_fmt = 'echo D?%s | xargs rg --column --line-number --no-heading --color=always --smart-case'
   let initial_command = printf(command_fmt, shellescape(a:query))
   let reload_command = printf(command_fmt, '{q}')
   let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
