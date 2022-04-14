@@ -118,3 +118,6 @@
 [submodule "bundle/vim-log-highlighting"]
 	path = bundle/vim-log-highlighting
 	url = https://github.com/MTDL9/vim-log-highlighting.git
+[submodule "bundle/vim-argumentative"]
+	path = bundle/vim-argumentative
+	url = https://github.com/PeterRincker/vim-argumentative.git
