@@ -77,7 +77,7 @@ augroup myautocommands
     autocmd CursorHold,BufLeave,FocusLost * if &buftype == "" | if expand('%') == "" | execute 'update ~/dev/hjdocs/scratches/vim_scratch_' . strftime("%Y%m%d_%H%M") . '.txt' | else | update | endif | endif
 
     " https://stackoverflow.com/a/38082157
-    autocmd BufEnter * :lcd %:p:h | silent! lcd `git rev-parse --show-toplevel` | silent! lcd `git rev-parse --show-toplevel`/../../src
+    autocmd BufEnter * :lcd %:p:h | silent lcd `git rev-parse --show-superproject-working-tree --show-toplevel <bar> head -1` | silent! lcd `git rev-parse --show-superproject-working-tree --show-toplevel <bar> head -1`/../../src
 
     " http://www.bestofvim.com/tip/better-commit-messages/
     autocmd FileType gitcommit setlocal spell
