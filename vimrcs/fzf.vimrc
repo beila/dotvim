@@ -1,7 +1,7 @@
 set runtimepath+=/usr/local/opt/fzf
 
-map <leader>f :GFiles<Enter>
-map <leader>F :Files<Enter>
+map <leader>f :Files<Enter>
+map <leader>F :GFiles<Enter>
 map <leader>g :Rg <C-R>=expand("<cword>")<Enter><Enter>
 vmap <leader>g "9y:Rg <C-R>9<Enter>
 map <leader><c-g> :Rg <C-R>+<Enter>
