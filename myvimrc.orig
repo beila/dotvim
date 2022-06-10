@@ -1,0 +1,169 @@
+let mapleader = "'"
+map <Space> <Leader>
+map <Backspace> <Leader>
+
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
+runtime! vimrcs/*.vimrc
+
+" Window Splits
+" http://sontek.net/turning-vim-into-a-modern-python-ide#id4
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+" Syntax Highlighting and Validation
+" http://sontek.net/turning-vim-into-a-modern-python-ide#id8
+syntax on	" syntax highlighing
+filetype on	" try to detect filetypes
+filetype plugin indent on	" enable loading indent file for filetype
+
+" http://stevelosh.com/blog/2010/09/coming-home-to-vim/#important-vimrc-lines
+set nocompatible
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+set encoding=utf-8
+set scrolloff=3
+set autoindent
+set showcmd
+set wildmenu
+set wildmode=list,full
+set ttyfast
+set ruler
+set backspace=indent,eol,start
+set laststatus=2
+"set relativenumber
+set undofile
+set history=5000
+
+set ignorecase
+set smartcase
+set gdefault
+set incsearch
+set showmatch
+set hlsearch
+nnoremap <leader><Backspace> :noh<cr>
+
+set wrap
+"set textwidth=100
+set formatoptions=qcron1
+"set colorcolumn=100
+
+" https://lee-phillips.org/badvim/
+set nobackup
+set nowritebackup
+
+nnoremap <Down> gj
+nnoremap <Up> gk
+nnoremap j gj
+nnoremap k gk
+
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+
+augroup myautocommands
+    autocmd!
+    " http://stackoverflow.com/a/1552193
+    autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
+
+    " https://www.reddit.com/r/vim/comments/g4dhvf/is_there_a_way_to_create_random_file_name_for/fnwyd4j?utm_source=share&utm_medium=web2x&context=3
+    autocmd CursorHold,BufLeave,FocusLost * if &buftype == "" | if expand('%') == "" | execute 'update ~/dev/hjdocs/scratches/vim_scratch_' . strftime("%Y%m%d_%H%M") . '.txt' | else | update | endif | endif
+
+    " https://stackoverflow.com/a/38082157
+<<<<<<< HEAD
+    autocmd BufEnter * silent! :lcd %:p:h | silent! lcd `git rev-parse --show-toplevel` | silent! lcd `git rev-parse --show-toplevel`/../../src
+||||||| 7a86a8b
+    autocmd BufEnter * :lcd %:p:h | silent! lcd `git rev-parse --show-toplevel` | silent! lcd `git rev-parse --show-toplevel`/../../src
+=======
+    autocmd BufEnter * :lcd %:p:h | silent! lcd `git rev-parse --show-superproject-working-tree --show-toplevel \| head -1`| silent! lcd ../../src
+>>>>>>> origin
+
+    " http://www.bestofvim.com/tip/better-commit-messages/
+    autocmd FileType gitcommit setlocal spell
+    autocmd FileType markdown setlocal spell
+
+    autocmd FileType markdown setlocal shiftwidth=2 softtabstop=2
+
+    autocmd FileType python setlocal foldmethod=indent
+augroup END
+
+" https://stackoverflow.com/a/37558470
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave * mkview
+  autocmd BufWinEnter * silent! loadview
+augroup END
+
+" https://vim.fandom.com/wiki/Saving_a_file
+map <Esc><Esc> :wa<CR>
+
+" http://stevelosh.com/blog/2010/09/coming-home-to-vim/#using-the-leader
+"nnoremap <leader>ev <C-w><C-s>:e $MYVIMRC<cr>
+nnoremap <leader>ev :split +e $MYVIMRC<cr>
+
+" http://www.bestofvim.com/tip/auto-reload-your-vimrc/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+bestOfVim+%28%3Abest+of+Vim%29
+augroup reload_vimrc " {
+    autocmd!
+    autocmd BufWritePost $MYVIMRC source $MYVIMRC
+    autocmd BufWritePost ~/.vim/* source $MYVIMRC
+    autocmd BufWritePost ~/.dotfiles/vim.symlink/* source $MYVIMRC
+    autocmd BufWritePost ~/.dotfiles/vim.symlink/vimrcs/* source $MYVIMRC
+augroup END " }
+
+" http://stevelosh.com/blog/2010/09/coming-home-to-vim/#quicker-escaping
+inoremap hh <ESC>hh
+inoremap jj <ESC>jj
+inoremap kk <ESC>kk
+inoremap lll <ESC>lll
+
+" http://www.reddit.com/r/vim/comments/ybx2x/whats_he_using_to_make_spaces_or_tabs_looks_like/c5u7kq3
+"set list
+set nolist
+"set listchars=tab:▸\ ,trail:⋅,nbsp:⋅
+"set listchars=tab:\ \ ,trail:⋅,nbsp:⋅
+
+" https://stackoverflow.com/a/7078429
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
+
+" https://www.reddit.com/r/vim/comments/cn20tv/tip_histogrambased_diffs_using_modern_vim/?utm_source=share&utm_medium=web2x&context=3
+if has('nvim-0.3.2') || has("patch-8.1.0360")
+    set diffopt=filler,internal,algorithm:histogram,indent-heuristic
+endif
+
+""""""""""""
+" 내 설정! "
+""""""""""""
+
+" :help ins-completion
+inoremap ^] ^X^]
+inoremap ^F ^X^F
+inoremap ^D ^X^D
+inoremap ^L ^X^L
+
+map [q :update<Enter>:cp<Enter>
+map ]q :update<Enter>:cn<Enter>
+map [Q :update<Enter>:cfirst<Enter>
+map ]Q :update<Enter>:clast<Enter>
+map <leader>h :diffoff<Enter>:diffthis<Enter>
+map <leader>H :diffoff<Enter>
+
+set background=dark
+colorscheme torte
+
+set modeline
+set novisualbell t_vb=
+"set number
+set linebreak
+
+" :help ft-markdown-plugin
+let g:markdown_folding = 1
+
+set nofixendofline
