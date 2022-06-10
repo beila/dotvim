@@ -7,3 +7,4 @@ endif
 "source ~/.vim/androidrc
 "source ~/.vim/ignitionrc
 "source ~/.vim/ignition-ps4.vimrc
+"source ~/.vim/windows.vimrc
