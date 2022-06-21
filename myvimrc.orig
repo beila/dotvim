@@ -74,10 +74,16 @@ augroup myautocommands
     autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
 
     " https://www.reddit.com/r/vim/comments/g4dhvf/is_there_a_way_to_create_random_file_name_for/fnwyd4j?utm_source=share&utm_medium=web2x&context=3
-    autocmd CursorHold,BufLeave,FocusLost * if &buftype == "" | if expand('%') == "" | execute 'update ~/dev/hjdocs/scratches/vim_scratch_' . strftime("%Y%m%d_%H%M") . '.md' | else | update | endif | endif
+    autocmd CursorHold,BufLeave,FocusLost * if &buftype == "" | if expand('%') == "" | execute 'update ~/dev/hjdocs/scratches/vim_scratch_' . strftime("%Y%m%d_%H%M") . '.txt' | else | update | endif | endif
 
     " https://stackoverflow.com/a/38082157
-    autocmd BufEnter * silent! :lcd %:p:h | silent! lcd `git rev-parse --show-superproject-working-tree --show-toplevel \| head -1`| silent! lcd ../../src
+<<<<<<< HEAD
+    autocmd BufEnter * silent! :lcd %:p:h | silent! lcd `git rev-parse --show-toplevel` | silent! lcd `git rev-parse --show-toplevel`/../../src
+||||||| 7a86a8b
+    autocmd BufEnter * :lcd %:p:h | silent! lcd `git rev-parse --show-toplevel` | silent! lcd `git rev-parse --show-toplevel`/../../src
+=======
+    autocmd BufEnter * :lcd %:p:h | silent! lcd `git rev-parse --show-superproject-working-tree --show-toplevel \| head -1`| silent! lcd ../../src
+>>>>>>> origin
 
     " http://www.bestofvim.com/tip/better-commit-messages/
     autocmd FileType gitcommit setlocal spell
