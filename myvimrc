@@ -161,3 +161,6 @@ set linebreak
 let g:markdown_folding = 1
 
 set nofixendofline
+
+" https://stackoverflow.com/a/8752690
+command! -bang -complete=file -nargs=+ Rename saveas<bang> <args> | call delete(expand('#'))`
