@@ -43,11 +43,6 @@
 	url = https://github.com/chazy/cscope_maps.git
 	branch = master
 	ignore = all
-[submodule "bundle/matchit.zip"]
-	path = bundle/matchit.zip
-	url = https://github.com/vim-scripts/matchit.zip.git
-	branch = master
-	ignore = all
 [submodule "bundle/vim-gitgutter"]
 	path = bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
@@ -121,3 +116,6 @@
 [submodule "bundle/vim-argumentative"]
 	path = bundle/vim-argumentative
 	url = https://github.com/PeterRincker/vim-argumentative.git
+[submodule "bundle/vim-matchup"]
+	path = bundle/vim-matchup
+	url = https://github.com/andymass/vim-matchup.git
