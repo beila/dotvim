@@ -116,6 +116,8 @@ inoremap hh <ESC>hh
 inoremap jj <ESC>jj
 inoremap kk <ESC>kk
 inoremap lll <ESC>lll
+inoremap bb <ESC>bb
+inoremap wwww <ESC>wwww
 
 " http://www.reddit.com/r/vim/comments/ybx2x/whats_he_using_to_make_spaces_or_tabs_looks_like/c5u7kq3
 "set list
