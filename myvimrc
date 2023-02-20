@@ -91,7 +91,7 @@ augroup END
 " https://stackoverflow.com/a/37558470
 augroup remember_folds
   autocmd!
-  autocmd BufWinLeave * mkview
+  autocmd BufWinLeave * silent! mkview
   autocmd BufWinEnter * silent! loadview
 augroup END
 
@@ -116,6 +116,8 @@ inoremap hh <ESC>hh
 inoremap jj <ESC>jj
 inoremap kk <ESC>kk
 inoremap lll <ESC>lll
+inoremap bb <ESC>bb
+inoremap wwww <ESC>wwww
 
 " http://www.reddit.com/r/vim/comments/ybx2x/whats_he_using_to_make_spaces_or_tabs_looks_like/c5u7kq3
 "set list
@@ -161,3 +163,6 @@ set linebreak
 let g:markdown_folding = 1
 
 set nofixendofline
+
+" https://stackoverflow.com/a/8752690
+command! -bang -complete=file -nargs=+ Rename saveas<bang> <args> | call delete(expand('#'))`
