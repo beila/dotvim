@@ -31,8 +31,8 @@ function! RipgrepFzf(query, fullscreen)
   call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
 endfunction
 
-command! -nargs=* -bang Rg call RipgrepFzf('"D?'.<q-args>.'" -sw', <bang>0)
-command! -nargs=* -bang Rgi call RipgrepFzf('"D?'.<q-args>.'" --no-ignore -sw', <bang>0)
+command! -nargs=* -bang Rg call RipgrepFzf('"D?'.<q-args>.'" -sw ', <bang>0)
+command! -nargs=* -bang Rgi call RipgrepFzf('"D?'.<q-args>.'" --no-ignore -sw ', <bang>0)
 
 " https://github.com/junegunn/fzf.vim#user-content-mappings
 " Insert mode completion

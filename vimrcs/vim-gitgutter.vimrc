@@ -10,3 +10,5 @@ augroup gitguttersigncolumnbackgroundcolour
     autocmd!
     autocmd ColorScheme * highlight! link SignColumn LineNr
 augroup END
+
+map zg :GitGutterFold<Enter>zr
