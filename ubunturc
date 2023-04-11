@@ -1,2 +1,2 @@
-set guifont=Ubuntu\ Mono\ derivative\ Powerline:10
-let g:ackprg = '/usr/bin/rg --vimgrep'
+" set guifont=Ubuntu\ Mono\ derivative\ Powerline:10
+" let g:ackprg = '/usr/bin/rg --vimgrep'
