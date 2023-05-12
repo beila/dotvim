@@ -148,8 +148,8 @@ map [q :update<Enter>:cp<Enter>
 map ]q :update<Enter>:cn<Enter>
 map [Q :update<Enter>:cfirst<Enter>
 map ]Q :update<Enter>:clast<Enter>
-map <leader>h :diffoff<Enter>:diffthis<Enter>
-map <leader>H :diffoff<Enter>
+map <leader>d :diffoff<Enter>:diffthis<Enter>
+map <leader>D :diffoff<Enter>
 
 set background=dark
 colorscheme torte
