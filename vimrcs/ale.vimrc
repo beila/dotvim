@@ -5,7 +5,7 @@ nmap <leader>af <Plug>(ale_fix)
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['eslint'],
-\   'typescript': ['prettier'],
+\   'typescript': ['prettier', 'tsserver'],
 \   'python': [
 \       'add_blank_lines_for_python_control_statements',
 \       'autoflake',
@@ -21,4 +21,10 @@ let g:ale_fixers = {
 augroup ale_python
     autocmd!
     autocmd FileType python let b:ale_python_mypy_options = '--python-executable venv/bin/python'
+augroup END
+
+augroup ale_typescript
+    autocmd!
+    autocmd FileType typescript let b:ale_javascript_prettier_executable = getcwd() . 'node_modules/.bin/prettier'
+    autocmd FileType typescript let b:ale_typescript_tsserver_executable = getcwd() . 'node_modules/.bin/tsserver'
 augroup END
