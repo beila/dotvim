@@ -23,8 +23,8 @@ augroup ale_python
     autocmd FileType python let b:ale_python_mypy_options = '--python-executable venv/bin/python'
 augroup END
 
-augroup ale_typescript
-    autocmd!
-    autocmd FileType typescript let b:ale_javascript_prettier_executable = getcwd() . 'node_modules/.bin/prettier'
-    autocmd FileType typescript let b:ale_typescript_tsserver_executable = getcwd() . 'node_modules/.bin/tsserver'
-augroup END
+"augroup ale_typescript
+    "autocmd!
+    "autocmd FileType typescript let b:ale_javascript_prettier_executable = getcwd() . 'node_modules/.bin/prettier'
+    "autocmd FileType typescript let b:ale_typescript_tsserver_executable = getcwd() . 'node_modules/.bin/tsserver'
+"augroup END
