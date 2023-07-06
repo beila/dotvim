@@ -50,3 +50,5 @@ function! s:fzf_statusline()
 endfunction
 
 autocmd! User FzfStatusLine call <SID>fzf_statusline()
+
+let g:fzf_preview_window = ['right,50%', 'ctrl-\']
