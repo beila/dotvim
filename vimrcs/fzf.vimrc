@@ -32,7 +32,7 @@ function! RipgrepFzf(query, fullscreen)
 endfunction
 
 command! -nargs=* -bang Rg call RipgrepFzf('-g!tests -g!__tests__ -g!__mocks__ "(?s)D?(Native_)?'.<q-args>.'" -sw ', <bang>0)
-command! -nargs=* -bang Rgi call RipgrepFzf('--no-ignore "(?s)D?(Native_)?'.<q-args>.'" -sw ', <bang>0)
+command! -nargs=* -bang Rgi call RipgrepFzf('"(?s)D?(Native_)?'.<q-args>.'" -sw ', <bang>0)
 
 " https://github.com/junegunn/fzf.vim#user-content-mappings
 " Insert mode completion
