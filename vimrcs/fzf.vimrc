@@ -31,7 +31,7 @@ function! RipgrepFzf(query, fullscreen)
   call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
 endfunction
 
-command! -nargs=* -bang Rg call RipgrepFzf('-g!tests -g!__tests__ -g!__mocks__ "(?s)D?(Native_)?'.<q-args>.'" -sw ', <bang>0)
+command! -nargs=* -bang Rg call RipgrepFzf('-g!package-lock.json -g!tests -g!__tests__ -g!__mocks__ "(?s)D?(Native_)?'.<q-args>.'" -sw ', <bang>0)
 command! -nargs=* -bang Rgi call RipgrepFzf('"(?s)D?(Native_)?'.<q-args>.'" -sw ', <bang>0)
 
 " https://github.com/junegunn/fzf.vim#user-content-mappings
