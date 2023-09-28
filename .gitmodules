@@ -122,3 +122,6 @@
 [submodule "bundle/vim-peekaboo"]
 	path = bundle/vim-peekaboo
 	url = https://github.com/junegunn/vim-peekaboo.git
+[submodule "bundle/vimspector"]
+	path = bundle/vimspector
+	url = https://github.com/puremourning/vimspector.git
