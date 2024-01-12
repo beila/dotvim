@@ -9,14 +9,16 @@ runtime! vimrcs/*.vimrc
 
 " Window Splits
 " http://sontek.net/turning-vim-into-a-modern-python-ide#id4
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
 map <c-s-j> <c-w>J
 map <c-s-k> <c-w>K
 map <c-s-l> <c-w>L
 map <c-s-h> <c-w>H
+" In WSL, <c-s-h> overrides <c-h>. Mapping <c-h> later prevents it.
+" Although <c-s-h> is not mapped any more, I use <c-h> a lot more frequently.
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
 
 " Syntax Highlighting and Validation
 " http://sontek.net/turning-vim-into-a-modern-python-ide#id8
