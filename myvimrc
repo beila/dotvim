@@ -20,6 +20,8 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
+nnoremap gq <c-w>c
+
 " Syntax Highlighting and Validation
 " http://sontek.net/turning-vim-into-a-modern-python-ide#id8
 syntax on	" syntax highlighing
