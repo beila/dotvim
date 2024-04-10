@@ -2,9 +2,6 @@ let mapleader = "'"
 map <Space> <Leader>
 map <Backspace> <Leader>
 
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
-
 runtime! vimrcs/*.vimrc
 
 " Window Splits
