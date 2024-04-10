@@ -12,7 +12,7 @@ if has("gui_running")
     else
         "set guifont=Anonymous\ Pro\ 11
         "set guifont=Ubuntu\ Mono\ 10
-        set guifont=NanumGothicCoding\ Bold\ 11
+        set guifont=NanumGothicCoding\ 12
     endif
 
 endif
