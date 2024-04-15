@@ -8,7 +8,7 @@ if has("gui_running")
     if has('nvim')
         "set guifont=Anonymous\ Pro:h11
         "set guifont=Ubuntu\ Mono:h10
-        set guifont=NanumGothicCoding:h10
+        set guifont=NanumGothicCoding:h11
     else
         "set guifont=Anonymous\ Pro\ 11
         "set guifont=Ubuntu\ Mono\ 10
