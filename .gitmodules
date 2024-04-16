@@ -135,3 +135,9 @@
 [submodule "pack/bundles/start/nvim-lspconfig"]
 	path = pack/bundles/start/nvim-lspconfig
 	url = https://github.com/neovim/nvim-lspconfig.git
+[submodule "pack/bundles/start/nvim-web-devicons"]
+	path = pack/bundles/start/nvim-web-devicons
+	url = https://github.com/nvim-tree/nvim-web-devicons.git
+[submodule "pack/bundles/start/lush.nvim"]
+	path = pack/bundles/start/lush.nvim
+	url = https://github.com/rktjmp/lush.nvim.git
