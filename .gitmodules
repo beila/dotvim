@@ -124,7 +124,7 @@
 	path = pack/bundles/start/mason.nvim
 	url = https://github.com/williamboman/mason.nvim
 [submodule "pack/bundles/start/fzf-lua"]
-	path = pack/bundles/start/fzf-lua
+	path = pack/bundles/opt/fzf-lua
 	url = https://github.com/ibhagwan/fzf-lua.git
 [submodule "pack/bundles/start/lsp-zero.nvim"]
 	path = pack/bundles/start/lsp-zero.nvim
