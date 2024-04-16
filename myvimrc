@@ -4,6 +4,13 @@ map <Backspace> <Leader>
 
 runtime! vimrcs/*.vimrc
 
+if has('nvim')
+    runtime! vimrcs/*.nvimrc
+    runtime! vimrcs/*.lua
+else
+    runtime! vimrcs/*.vvimrc
+endif
+
 " Window Splits
 " http://sontek.net/turning-vim-into-a-modern-python-ide#id4
 map <c-s-j> <c-w>J

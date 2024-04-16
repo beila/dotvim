@@ -1,122 +1,125 @@
 [submodule "bundle/fugitive"]
-	path = bundle/fugitive
+	path = pack/bundles/start/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
 	branch = master
 	ignore = all
 [submodule "bundle/tasklist"]
-	path = bundle/tasklist
+	path = pack/bundles/start/tasklist
 	url = https://github.com/vim-scripts/TaskList.vim.git
 	branch = master
 	ignore = all
 [submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
+	path = pack/bundles/start/nerdtree
 	url = https://github.com/vim-scripts/The-NERD-tree.git
 	branch = master
 	ignore = all
 [submodule "bundle/nerdcommenter"]
-	path = bundle/nerdcommenter
+	path = pack/bundles/start/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
 	branch = master
 	ignore = all
 [submodule "bundle/YankRing"]
-	path = bundle/YankRing
+	path = pack/bundles/start/YankRing
 	url = https://github.com/vim-scripts/YankRing.vim.git
 	branch = master
 	ignore = all
 [submodule "bundle/plantuml-syntax"]
-	path = bundle/plantuml-syntax
+	path = pack/bundles/start/plantuml-syntax
 	url = https://github.com/aklt/plantuml-syntax.git
 	branch = master
 	ignore = all
 [submodule "bundle/tagbar"]
-	path = bundle/tagbar
+	path = pack/bundles/start/tagbar
 	url = https://github.com/majutsushi/tagbar.git
 	branch = master
 	ignore = all
 [submodule "bundle/vim-indent-guides"]
-	path = bundle/vim-indent-guides
+	path = pack/bundles/start/vim-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
 	branch = master
 	ignore = all
 [submodule "bundle/cscope_maps"]
-	path = bundle/cscope_maps
+	path = pack/bundles/start/cscope_maps
 	url = https://github.com/chazy/cscope_maps.git
 	branch = master
 	ignore = all
 [submodule "bundle/vim-gitgutter"]
-	path = bundle/vim-gitgutter
+	path = pack/bundles/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
 	branch = master
 	ignore = all
 [submodule "bundle/SrcExpl"]
-	path = bundle/SrcExpl
+	path = pack/bundles/start/SrcExpl
 	url = https://github.com/vim-scripts/SrcExpl
 	branch = master
 	ignore = all
 [submodule "bundle/neomru"]
-	path = bundle/neomru
+	path = pack/bundles/start/neomru
 	url = https://github.com/Shougo/neomru.vim.git
 	branch = master
 	ignore = all
 [submodule "bundle/vimproc"]
-	path = bundle/vimproc
+	path = pack/bundles/start/vimproc
 	url = https://github.com/Shougo/vimproc.vim.git
 	branch = master
 	ignore = all
 [submodule "bundle/vim-dirdiff"]
-	path = bundle/vim-dirdiff
+	path = pack/bundles/start/vim-dirdiff
 	url = https://github.com/will133/vim-dirdiff.git
 	branch = master
 	ignore = all
 [submodule "bundle/typescript-vim"]
-	path = bundle/typescript-vim
+	path = pack/bundles/start/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
 [submodule "bundle/fzf"]
-	path = bundle/fzf
+	path = pack/bundles/start/fzf
 	url = https://github.com/junegunn/fzf
 [submodule "bundle/fzf.vim"]
-	path = bundle/fzf.vim
+	path = pack/bundles/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
 [submodule "bundle/undotree"]
-	path = bundle/undotree
+	path = pack/bundles/start/undotree
 	url = https://github.com/mbbill/undotree/
 [submodule "bundle/vim-airline"]
-	path = bundle/vim-airline
+	path = pack/bundles/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
 [submodule "bundle/vim-airline-themes"]
-	path = bundle/vim-airline-themes
+	path = pack/bundles/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
 [submodule "bundle/vim-fubitive"]
-	path = bundle/vim-fubitive
+	path = pack/bundles/start/vim-fubitive
 	url = https://github.com/tommcdo/vim-fubitive.git
 [submodule "bundle/vim-rhubarb"]
-	path = bundle/vim-rhubarb
+	path = pack/bundles/start/vim-rhubarb
 	url = https://github.com/tpope/vim-rhubarb.git
 [submodule "bundle/vim-cmake-help"]
-	path = bundle/vim-cmake-help
+	path = pack/bundles/start/vim-cmake-help
 	url = https://github.com/bfrg/vim-cmake-help
 	branch = master
 [submodule "bundle/vim-jinja"]
-	path = bundle/vim-jinja
+	path = pack/bundles/start/vim-jinja
 	url = https://github.com/lepture/vim-jinja.git
 [submodule "bundle/ale"]
-	path = bundle/ale
+	path = pack/bundles/opt/ale
 	url = https://github.com/dense-analysis/ale.git
 [submodule "bundle/jsonc"]
-	path = bundle/jsonc
+	path = pack/bundles/start/jsonc
 	url = https://github.com/neoclide/jsonc.vim
 [submodule "bundle/vim-log-highlighting"]
-	path = bundle/vim-log-highlighting
+	path = pack/bundles/start/vim-log-highlighting
 	url = https://github.com/MTDL9/vim-log-highlighting.git
 [submodule "bundle/vim-argumentative"]
-	path = bundle/vim-argumentative
+	path = pack/bundles/start/vim-argumentative
 	url = https://github.com/PeterRincker/vim-argumentative.git
 [submodule "bundle/vim-matchup"]
-	path = bundle/vim-matchup
+	path = pack/bundles/start/vim-matchup
 	url = https://github.com/andymass/vim-matchup.git
 [submodule "bundle/vim-peekaboo"]
-	path = bundle/vim-peekaboo
+	path = pack/bundles/start/vim-peekaboo
 	url = https://github.com/junegunn/vim-peekaboo.git
 [submodule "bundle/vimspector"]
-	path = bundle/vimspector
+	path = pack/bundles/opt/vimspector
 	url = https://github.com/puremourning/vimspector.git
+[submodule "pack/bundles/opt/mason.nvim"]
+	path = pack/bundles/start/mason.nvim
+	url = https://github.com/williamboman/mason.nvim

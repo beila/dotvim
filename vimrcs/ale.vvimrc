@@ -1,3 +1,5 @@
+packadd! ale
+
 nmap <silent> [a <Plug>(ale_previous_wrap)
 nmap <silent> ]a <Plug>(ale_next_wrap)
 nmap <leader>af <Plug>(ale_fix)
