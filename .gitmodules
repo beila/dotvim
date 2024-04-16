@@ -72,10 +72,10 @@
 	path = pack/bundles/start/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
 [submodule "bundle/fzf"]
-	path = pack/bundles/start/fzf
+	path = pack/bundles/opt/fzf
 	url = https://github.com/junegunn/fzf
 [submodule "bundle/fzf.vim"]
-	path = pack/bundles/start/fzf.vim
+	path = pack/bundles/opt/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
 [submodule "bundle/undotree"]
 	path = pack/bundles/start/undotree
@@ -123,3 +123,15 @@
 [submodule "pack/bundles/opt/mason.nvim"]
 	path = pack/bundles/start/mason.nvim
 	url = https://github.com/williamboman/mason.nvim
+[submodule "pack/bundles/start/fzf-lua"]
+	path = pack/bundles/start/fzf-lua
+	url = https://github.com/ibhagwan/fzf-lua.git
+[submodule "pack/bundles/start/lsp-zero.nvim"]
+	path = pack/bundles/start/lsp-zero.nvim
+	url = https://github.com/VonHeikemen/lsp-zero.nvim.git
+[submodule "pack/bundles/start/mason-lspconfig.nvim"]
+	path = pack/bundles/start/mason-lspconfig.nvim
+	url = https://github.com/williamboman/mason-lspconfig.nvim.git
+[submodule "pack/bundles/start/nvim-lspconfig"]
+	path = pack/bundles/start/nvim-lspconfig
+	url = https://github.com/neovim/nvim-lspconfig.git
