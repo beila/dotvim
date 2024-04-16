@@ -48,11 +48,6 @@
 	url = https://github.com/airblade/vim-gitgutter.git
 	branch = master
 	ignore = all
-[submodule "bundle/vim-pathogen"]
-	path = bundle/vim-pathogen
-	url = https://github.com/tpope/vim-pathogen.git
-	branch = master
-	ignore = all
 [submodule "bundle/SrcExpl"]
 	path = bundle/SrcExpl
 	url = https://github.com/vim-scripts/SrcExpl
