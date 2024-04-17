@@ -4,6 +4,10 @@ local fzf_lua = require("fzf-lua")
 
 fzf_lua.setup_fzfvim_cmds()
 
+vim.keymap.set({ "n", "v", "i" }, "<F8>",
+    function() fzf_lua.lsp_document_symbols() end,
+    {})
+
 vim.keymap.set({ "n", "v", "i" }, "<C-]>",
     function() fzf_lua.lsp_finder() end,
     {})
