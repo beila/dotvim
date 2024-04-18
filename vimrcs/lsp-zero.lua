@@ -31,7 +31,7 @@ vim.keymap.set({ "n" }, "]a",
         vim.diagnostic.goto_next(o)
     end,
     {})
-sdghi = g
+
 vim.keymap.set({ "n" }, "[a",
     function()
         local eo = { severity = vim.diagnostic.severity.ERROR }
@@ -47,6 +47,10 @@ vim.keymap.set({ "n" }, "{A",
     function() vim.diagnostic.goto_prev() end,
     {})
 
-vim.keymap.set({ "n" }, "<leader>af",
+vim.keymap.set({ "n" }, "<leader>aa",
     function() require("fzf-lua").lsp_code_actions() end,
+    {})
+
+vim.keymap.set({ "n" }, "<leader>af",
+    function() vim.lsp.buf.format() end,
     {})

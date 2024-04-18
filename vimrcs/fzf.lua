@@ -16,11 +16,6 @@ fzf_lua.setup({
     fzf_opts = { ['--layout'] = 'reverse-list' },
     lsp = {
         git_icons = true,
-        finder = { actions = { ["ctrl-]"] = { function() fzf_lua.lsp_references() end } } },
-        references = { actions = { ["ctrl-]"] = { function() fzf_lua.lsp_definitions() end } } },
-        definitions = { actions = { ["ctrl-]"] = { function() fzf_lua.lsp_declarations() end } } },
-        declarations = { actions = { ["ctrl-]"] = { function() fzf_lua.lsp_typedefs() end } } },
-        typedefs = { actions = { ["ctrl-]"] = { function() fzf_lua.lsp_implementations() end } } },
-        implementations = { actions = { ["ctrl-]"] = { function() fzf_lua.lsp_finder() end } } },
+        finder = { actions = { ["ctrl-]"] = { function() fzf_lua.lsp_definitions() end } } },
     },
 })
