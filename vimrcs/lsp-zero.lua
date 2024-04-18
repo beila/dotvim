@@ -26,8 +26,8 @@ vim.keymap.set({ "n" }, "]a",
         local wo = { severity = vim.diagnostic.severity.WARN }
         local io = { severity = vim.diagnostic.severity.INFO }
         local ho = { severity = vim.diagnostic.severity.HINT }
-        local get = vim.diagnostic.get
-        local o = get(0, eo) and eo or get(0, wo) and wo or get(0, io) and io or ho
+        local has = function(o) return next(vim.diagnostic.get(0, o)) ~= nil end
+        local o = has(eo) and eo or has(wo) and wo or has(io) and io or ho
         vim.diagnostic.goto_next(o)
     end,
     {})
@@ -35,7 +35,12 @@ vim.keymap.set({ "n" }, "]a",
 vim.keymap.set({ "n" }, "[a",
     function()
         local eo = { severity = vim.diagnostic.severity.ERROR }
-        vim.diagnostic.goto_prev(vim.diagnostic.get(0, eo) and eo or {})
+        local wo = { severity = vim.diagnostic.severity.WARN }
+        local io = { severity = vim.diagnostic.severity.INFO }
+        local ho = { severity = vim.diagnostic.severity.HINT }
+        local has = function(o) return next(vim.diagnostic.get(0, o)) ~= nil end
+        local o = has(eo) and eo or has(wo) and wo or has(io) and io or ho
+        vim.diagnostic.goto_prev(o)
     end,
     {})
 
