@@ -44,18 +44,18 @@ vim.keymap.set({ "n" }, "[a",
     end,
     {})
 
-vim.keymap.set({ "n" }, "}A",
+vim.keymap.set({ "n", "v" }, "}A",
     function() vim.diagnostic.goto_next() end,
     {})
 
-vim.keymap.set({ "n" }, "{A",
+vim.keymap.set({ "n", "v" }, "{A",
     function() vim.diagnostic.goto_prev() end,
     {})
 
-vim.keymap.set({ "n" }, "<leader>aa",
+vim.keymap.set({ "n", "v" }, "<leader>aa",
     function() require("fzf-lua").lsp_code_actions() end,
     {})
 
-vim.keymap.set({ "n" }, "<leader>af",
+vim.keymap.set({ "n", "v" }, "<leader>af",
     function() vim.lsp.buf.format() end,
     {})
