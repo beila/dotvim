@@ -6,7 +6,6 @@ source ~/.vim/ubunturc
 if has("gui_running")
     source ~/.vim/gvimrc
     if exists("g:neovide")
-        colorscheme github_dark_high_contrast
     endif
 endif
 "source ~/.vim/androidrc

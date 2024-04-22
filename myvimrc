@@ -164,7 +164,8 @@ map <leader>d :diffoff<Enter>:diffthis<Enter>
 map <leader>D :diffoff<Enter>:set nocursorbind<Enter>:set noscrollbind<Enter>
 
 set background=dark
-colorscheme torte
+"colorscheme torte
+colorscheme github_dark_high_contrast
 
 set modeline
 set novisualbell t_vb=

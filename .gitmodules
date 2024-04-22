@@ -141,3 +141,6 @@
 [submodule "pack/bundles/start/lush.nvim"]
 	path = pack/bundles/start/lush.nvim
 	url = https://github.com/rktjmp/lush.nvim.git
+[submodule "pack/bundles/start/github-nvim-theme"]
+	path = pack/bundles/start/github-nvim-theme
+	url = https://github.com/projekt0n/github-nvim-theme.git
