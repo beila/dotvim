@@ -95,9 +95,13 @@ augroup myautocommands
     autocmd FileType gitcommit setlocal spell
     autocmd FileType markdown setlocal spell
 
-    autocmd FileType markdown setlocal shiftwidth=2 softtabstop=2
-
     autocmd FileType python setlocal foldmethod=indent
+augroup END
+
+silent! source ~/.session.vim
+augroup remember_session
+  autocmd!
+  autocmd VimSuspend * silent! mksession! ~/.session.vim
 augroup END
 
 " https://stackoverflow.com/a/37558470
