@@ -114,9 +114,6 @@
 [submodule "bundle/vim-matchup"]
 	path = pack/bundles/start/vim-matchup
 	url = https://github.com/andymass/vim-matchup.git
-[submodule "bundle/vim-peekaboo"]
-	path = pack/bundles/start/vim-peekaboo
-	url = https://github.com/junegunn/vim-peekaboo.git
 [submodule "bundle/vimspector"]
 	path = pack/bundles/opt/vimspector
 	url = https://github.com/puremourning/vimspector.git
