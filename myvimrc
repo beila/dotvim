@@ -101,7 +101,7 @@ augroup END
 silent! source ~/.session.vim
 augroup remember_session
   autocmd!
-  autocmd VimSuspend * silent! mksession! ~/.session.vim
+  autocmd VimLeave * silent! mksession! ~/.session.vim
 augroup END
 
 " https://stackoverflow.com/a/37558470
