@@ -39,7 +39,7 @@ set nocompatible
 set tabstop=4 softtabstop=-1 shiftwidth=4 expandtab
 
 set encoding=utf-8
-set scrolloff=3
+set scrolloff=10
 set autoindent
 set showcmd
 set wildmenu
@@ -48,7 +48,7 @@ set ttyfast
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
-"set relativenumber
+set relativenumber
 set undofile
 set history=5000
 
@@ -95,7 +95,7 @@ augroup myautocommands
     autocmd FileType gitcommit setlocal spell
     autocmd FileType markdown setlocal spell
 
-    autocmd FileType python setlocal foldmethod=indent
+    "autocmd FileType python setlocal foldmethod=indent
 augroup END
 
 silent! source ~/.session.vim
@@ -173,11 +173,11 @@ colorscheme github_dark_high_contrast
 
 set modeline
 set novisualbell t_vb=
-"set number
+set number
 set linebreak
 
 " :help ft-markdown-plugin
-let g:markdown_folding = 1
+"let g:markdown_folding = 1
 
 set nofixendofline
 
