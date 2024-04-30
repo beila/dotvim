@@ -98,11 +98,13 @@ augroup myautocommands
     "autocmd FileType python setlocal foldmethod=indent
 augroup END
 
-silent! source ~/.session.vim
-augroup remember_session
-  autocmd!
-  autocmd VimLeave * silent! mksession! ~/.session.vim
-augroup END
+if has("gui_running")
+    silent! source ~/.session.vim
+    augroup remember_session
+      autocmd!
+      autocmd VimLeave * silent! mksession! ~/.session.vim
+    augroup END
+endif
 
 " https://stackoverflow.com/a/37558470
 augroup remember_folds
