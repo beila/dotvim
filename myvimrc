@@ -187,4 +187,4 @@ set nofixendofline
 command! -bang -complete=file -nargs=+ Rename saveas<bang> <args> | call delete(expand('#'))`
 
 set noautoread
-set cmdheight=0
+set cmdheight=1
