@@ -100,6 +100,8 @@ augroup END
 
 if has("gui_running")
     silent! source ~/.session.vim
+    set cmdheight=1
+
     augroup remember_session
       autocmd!
       autocmd VimLeave * silent! mksession! ~/.session.vim
@@ -187,4 +189,3 @@ set nofixendofline
 command! -bang -complete=file -nargs=+ Rename saveas<bang> <args> | call delete(expand('#'))`
 
 set noautoread
-set cmdheight=1
