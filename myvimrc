@@ -171,6 +171,9 @@ map ]Q :update<Enter>:clast<Enter>
 map <leader>d :diffoff<Enter>:diffthis<Enter>
 map <leader>D :diffoff<Enter>:set nocursorbind<Enter>:set noscrollbind<Enter>
 
+" First fold then unfold all the way down
+nnoremap zO zczO
+
 set background=dark
 "colorscheme torte
 colorscheme github_dark_high_contrast
