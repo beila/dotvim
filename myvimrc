@@ -100,13 +100,18 @@ augroup END
 
 if has("gui_running")
     silent! source ~/.session.vim
-    set cmdheight=1
 
     augroup remember_session
       autocmd!
       autocmd VimLeave * silent! mksession! ~/.session.vim
     augroup END
 endif
+
+" when neovide opens new I had to set cmdheight=1 for each tab.
+augroup tabcmdheight
+  autocmd!
+  autocmd TabEnter * silent! set cmdheight=1
+augroup END
 
 " https://stackoverflow.com/a/37558470
 augroup remember_folds

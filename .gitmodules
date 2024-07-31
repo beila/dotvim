@@ -147,3 +147,6 @@
 [submodule "pack/bundles/start/vim-scimark"]
 	path = pack/bundles/start/vim-scimark
 	url = https://github.com/mipmip/vim-scimark.git
+[submodule "pack/bundles/start/tabline.vim"]
+	path = pack/bundles/start/tabline.vim
+	url = https://github.com/mkitt/tabline.vim.git
