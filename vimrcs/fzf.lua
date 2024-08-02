@@ -4,6 +4,10 @@ local fzf_lua = require("fzf-lua")
 
 fzf_lua.setup_fzfvim_cmds()
 
+vim.keymap.set({ "n", "v", "i" }, "<leader>z",
+    function() fzf_lua.builtin() end,
+    {})
+
 vim.keymap.set({ "n", "v", "i" }, "<leader><tab>",
     function() fzf_lua.tabs() end,
     {})
@@ -18,6 +22,7 @@ vim.keymap.set({ "n", "v", "i" }, "<C-]>",
 
 fzf_lua.setup({
     fzf_opts = { ['--layout'] = 'reverse-list' },
+    previewers = { git_diff = { cmd_modified = "DFD_WIDTH=$COLUMNS git diff --color HEAD", } },
     oldfiles = { include_current_session = true },
     lsp = {
         git_icons = true,
