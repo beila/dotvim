@@ -29,7 +29,11 @@ vim.keymap.set({ "n", "v", "i" }, "<C-g><C-s>",
     {})
 
 vim.keymap.set({ "n", "v", "i" }, "<C-g><C-d>",
-    "<Cmd>Git difftool<CR>",
+    function()
+        vim.cmd "Git! difftool"
+        vim.cmd "cclose"
+        fzf_lua.quickfix()
+    end,
     {})
 
 vim.keymap.set({ "n", "v", "i" }, "<C-g>d",
@@ -52,7 +56,12 @@ vim.keymap.set({ "n", "v", "i" }, "<C-]>",
     function() fzf_lua.lsp_finder() end,
     {})
 
+vim.keymap.set({ "n", "v" }, "<leader> ",
+    function() fzf_lua.resume() end,
+    {})
+
 fzf_lua.setup({
+    keymap = { builtin = { ["<C-n>"] = "preview-page-down", ["<C-p>"] = "preview-page-up" }, fzf = { ["ctrl-a"] = "select-all" } },
     fzf_opts = { ['--layout'] = 'reverse-list' },
     previewers = { git_diff = { cmd_modified = "DFT_WIDTH=$COLUMNS DFT_COLOR=always git diff", } },
     oldfiles = { include_current_session = true },
