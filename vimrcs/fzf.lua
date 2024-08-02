@@ -61,9 +61,21 @@ vim.keymap.set({ "n", "v" }, "<leader> ",
     {})
 
 fzf_lua.setup({
-    keymap = { builtin = { ["<C-n>"] = "preview-page-down", ["<C-p>"] = "preview-page-up" }, fzf = { ["ctrl-a"] = "select-all" } },
+    keymap = {
+        builtin = {
+            ["<C-n>"] = "preview-page-down",
+            ["<C-p>"] = "preview-page-up"
+        },
+        fzf = { ["ctrl-a"] = "select-all" }
+    },
     fzf_opts = { ['--layout'] = 'reverse-list' },
-    previewers = { git_diff = { cmd_modified = "DFT_WIDTH=$COLUMNS DFT_COLOR=always git diff", } },
+    previewers = {
+        git_diff = {
+            cmd_modified =
+            "DFT_WIDTH=$COLUMNS DFT_COLOR=always git diff {file}; \
+             DFT_WIDTH=$COLUMNS DFT_COLOR=always git diff --staged {file}",
+        }
+    },
     oldfiles = { include_current_session = true },
     lsp = {
         git_icons = true,
