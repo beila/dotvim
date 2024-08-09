@@ -9,7 +9,7 @@
 	branch = master
 	ignore = all
 [submodule "bundle/nerdtree"]
-	path = pack/bundles/start/nerdtree
+	path = pack/bundles/opt/nerdtree
 	url = https://github.com/vim-scripts/The-NERD-tree.git
 	branch = master
 	ignore = all
@@ -150,3 +150,6 @@
 [submodule "pack/bundles/start/tabline.vim"]
 	path = pack/bundles/start/tabline.vim
 	url = https://github.com/mkitt/tabline.vim.git
+[submodule "pack/bundles/start/nvim-tree.lua"]
+	path = pack/bundles/start/nvim-tree.lua
+	url = https://github.com/nvim-tree/nvim-tree.lua.git
