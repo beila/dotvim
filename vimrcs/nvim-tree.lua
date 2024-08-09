@@ -5,10 +5,9 @@ vim.g.loaded_netrwPlugin = 1
 -- optionally enable 24-bit colour
 vim.opt.termguicolors = true
 
--- empty setup using defaults
-require("nvim-tree").setup({
-    actions = { open_file = { window_picker = { enable = false }, }, },
-})
+require("nvim-tree").setup {
+    actions = { open_file = { quit_on_open = true, window_picker = { enable = false }, }, },
+}
 
 vim.keymap.set({ "n", "v" }, "<leader>n",
     function()
