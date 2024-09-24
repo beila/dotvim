@@ -153,3 +153,6 @@
 [submodule "pack/bundles/start/nvim-tree.lua"]
 	path = pack/bundles/start/nvim-tree.lua
 	url = https://github.com/nvim-tree/nvim-tree.lua.git
+[submodule "pack/bundles/start/vim-just"]
+	path = pack/bundles/start/vim-just
+	url = https://github.com/NoahTheDuke/vim-just.git
