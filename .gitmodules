@@ -156,3 +156,6 @@
 [submodule "pack/bundles/start/vim-just"]
 	path = pack/bundles/start/vim-just
 	url = https://github.com/NoahTheDuke/vim-just.git
+[submodule "pack/bundles/start/tree-sitter-just"]
+	path = pack/bundles/start/tree-sitter-just
+	url = https://github.com/IndianBoy42/tree-sitter-just.git
