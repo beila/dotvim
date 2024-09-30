@@ -62,11 +62,13 @@ vim.keymap.set({ "n", "v" }, "<leader> ",
 
 fzf_lua.setup({
     keymap = {
-        builtin = {
-            --[1] = true,
-            ["<C-n>"] = "preview-page-down",
-            ["<C-p>"] = "preview-page-up"
-        },
+        --[[
+           [builtin = {
+           [    --[1] = true,
+           [    ["<C-n>"] = "preview-page-down",
+           [    ["<C-p>"] = "preview-page-up"
+           [},
+           ]]
         fzf = {
             --[1] = true,
             ["ctrl-a"] = "select-all"
