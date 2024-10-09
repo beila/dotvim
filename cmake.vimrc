@@ -9,3 +9,5 @@ let &efm .= ',%E' . 'CMake Error at %f:%l (message):'
 let &efm .= ',%Z' . 'Call Stack (most recent call first):'
 " Continuation is message
 let &efm .= ',%C' . ' %m'
+
+nmap <leader>C yyP:.s/"/\\"/<Enter>Imessage(STATUS "<Esc>A")<Esc>==
