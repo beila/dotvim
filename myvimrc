@@ -79,6 +79,8 @@ nnoremap gk k
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
+nnoremap "~ "+  # Kinesis 2 has + key in a place where normal keyboards has ~
+vnoremap "~ "+
 
 augroup myautocommands
     autocmd!
