@@ -60,6 +60,7 @@ vim.keymap.set({ "n", "v" }, "<leader> ",
     function() fzf_lua.resume() end,
     {})
 
+local actions = require "fzf-lua.actions"
 fzf_lua.setup({
     keymap = {
         --[[
@@ -75,6 +76,20 @@ fzf_lua.setup({
         }
     },
     fzf_opts = { ['--layout'] = 'reverse-list' },
+    grep = {
+        rg_glob = true,
+        -- first returned string is the new search query
+        -- second returned string are (optional) additional rg flags
+        -- @return string, string?
+        rg_glob_fn = function(query)
+            local regex, flags = query:match("^(.-)%s%-%-(.*)$")
+            -- If no separator is detected will return the original query
+            return (regex or query), flags
+        end,
+        actions = {
+            ["ctrl-r"] = { actions.toggle_ignore }
+        }
+    },
     previewers = {
         git_diff = {
             cmd_modified =
