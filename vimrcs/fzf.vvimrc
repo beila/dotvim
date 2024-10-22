@@ -1,2 +1,28 @@
 packadd fzf
 packadd fzf.vim
+
+" https://github.com/junegunn/fzf.vim#user-content-example-advanced-ripgrep-integration
+function! RipgrepFzf(query, fullscreen)
+  " {q} from reload_command always comes with enclosing quote 'blah'
+  " Thus, https://stackoverflow.com/a/6988363
+  let command_fmt = 'echo %s | xargs rg --column --line-number --no-heading --color=always --smart-case --follow'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command, '--bind', 'ctrl-]:toggle-preview', '--header=ctrl-]:toggle-preview']}
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
+endfunction
+
+command! -nargs=* -bang Rg call RipgrepFzf('-g!package-lock.json -g!__tests__ -g!__mocks__ "(?s)D?(Native_)?'.<q-args>.'" -sw ', <bang>0)
+command! -nargs=* -bang Rgi call RipgrepFzf('"(?s)D?(Native_)?'.<q-args>.'" -sw ', <bang>0)
+
+" https://github.com/junegunn/fzf.vim#user-content-custom-statusline
+function! s:fzf_statusline()
+  " Override statusline as you like
+  highlight fzf1 ctermfg=161 ctermbg=251
+  highlight fzf2 ctermfg=23 ctermbg=251
+  highlight fzf3 ctermfg=237 ctermbg=251
+  setlocal statusline=%#fzf1#\ >\ %#fzf2#fz%#fzf3#f
+endfunction
+
+autocmd! User FzfStatusLine call <SID>fzf_statusline()
+
