@@ -60,6 +60,7 @@ vim.keymap.set({ "n", "v" }, "<leader> ",
     function() fzf_lua.resume() end,
     {})
 
+require 'nvim-web-devicons'
 local actions = require "fzf-lua.actions"
 fzf_lua.setup({
     keymap = {
