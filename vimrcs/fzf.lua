@@ -88,7 +88,8 @@ fzf_lua.setup({
             return (regex or query), flags
         end,
         actions = {
-            ["ctrl-r"] = { actions.toggle_ignore }
+            ["ctrl-r"] = { actions.toggle_ignore },
+            ["ctrl-w"] = { function(_, opts) actions.toggle_flag(_, vim.tbl_extend("force", opts, { toggle_flag = '--word-regexp' })) end },
         }
     },
     previewers = {
