@@ -85,7 +85,7 @@ fzf_lua.setup({
         rg_glob_fn = function(query)
             local regex, flags = query:match("^(.-)%s%-%-(.*)$")
             -- If no separator is detected will return the original query
-            return (regex or query), '--follow ' .. flags
+            return (regex or query), flags .. ' --follow'
         end,
         actions = {
             ["ctrl-r"] = { actions.toggle_ignore }
