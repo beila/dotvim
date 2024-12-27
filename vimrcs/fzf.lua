@@ -1,4 +1,3 @@
-vim.cmd("packadd nvim-web-devicons")
 vim.cmd("packadd fzf-lua")
 
 local fzf_lua = require("fzf-lua")
@@ -77,6 +76,7 @@ fzf_lua.setup({
         }
     },
     fzf_opts = { ['--layout'] = 'reverse-list' },
+    defaults = { file_icons = false },
     grep = {
         rg_opts = '--follow --column --line-number --no-heading --color=always --smart-case --max-columns=4096 -e',
         rg_glob = true,
