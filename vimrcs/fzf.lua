@@ -60,7 +60,6 @@ vim.keymap.set({ "n", "v" }, "<leader> ",
     function() fzf_lua.resume() end,
     {})
 
-require 'nvim-web-devicons'
 local actions = require "fzf-lua.actions"
 fzf_lua.setup({
     keymap = {
@@ -77,6 +76,7 @@ fzf_lua.setup({
         }
     },
     fzf_opts = { ['--layout'] = 'reverse-list' },
+    files = { icons = false },
     grep = {
         rg_opts = '--follow --column --line-number --no-heading --color=always --smart-case --max-columns=4096 -e',
         rg_glob = true,
