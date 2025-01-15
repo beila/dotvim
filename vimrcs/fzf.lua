@@ -65,19 +65,18 @@ fzf_lua.setup({
     keymap = {
         --[[
            [builtin = {
-        00644
-        --- a/build-tools/utils.ts
-        --- +++ b/build-tools/utils.ts
-        --- @@ -59,7 +59,7 @@ export const runCmdWithArgs = (cmd: string, args?: string[], options?: any): str
-        ---
-        ---  const brazilPathCache: { [key: string]: string } = {
-        ---       "[AVLivingRoomNativeBundle@1.0]pkg.configfarm.lib":
-        ---       -        "/Volumes/workplace/avlrc-rel/src/AVLivingRoomClientBundle/build/private/tmp/brazil-path/[AVLivingRoomNativeBundle-1.0]pkg.configfarm.lib"
-        ---       +        "/home/hojin/dev/avlrrcbundle/src/AVLivingRoomClientBundle/build/private/tmp/brazil-path/[AVLivingRoomNativeBundle-1.0]pkg.configfarm.lib"
-        ---        };
-        ---
-        ---         function getBrazilBuildPath(brazilPkg: string, majorVersion: string, dir: string): string {
-        ---
+           [    --[1] = true,
+           [    ["<C-n>"] = "preview-page-down",
+           [    ["<C-p>"] = "preview-page-up"
+           [},
+           ]]
+        fzf = {
+            --[1] = true,
+            ["ctrl-a"] = "select-all"
+        }
+    },
+    fzf_opts = { ['--layout'] = 'reverse-list' },
+    defaults = { file_icons = false },
     grep = {
         rg_opts = '--follow --column --line-number --no-heading --color=always --smart-case --max-columns=4096 -e',
         rg_glob = true,
