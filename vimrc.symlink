@@ -7,6 +7,8 @@ if has("gui_running")
     source ~/.vim/gvimrc
     if exists("g:neovide")
     endif
+else
+    set mouse=
 endif
 "source ~/.vim/androidrc
 "source ~/.vim/ignitionrc
