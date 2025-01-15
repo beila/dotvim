@@ -76,7 +76,9 @@ fzf_lua.setup({
         }
     },
     fzf_opts = { ['--layout'] = 'reverse-list' },
+    defaults = { file_icons = false },
     grep = {
+        rg_opts = '--follow --column --line-number --no-heading --color=always --smart-case --max-columns=4096 -e',
         rg_glob = true,
         -- first returned string is the new search query
         -- second returned string are (optional) additional rg flags
@@ -87,7 +89,8 @@ fzf_lua.setup({
             return (regex or query), flags
         end,
         actions = {
-            ["ctrl-r"] = { actions.toggle_ignore }
+            ["ctrl-r"] = { actions.toggle_ignore },
+            ["ctrl-w"] = { function(_, opts) actions.toggle_flag(_, vim.tbl_extend("force", opts, { toggle_flag = '--word-regexp' })) end },
         }
     },
     previewers = {
