@@ -159,3 +159,6 @@
 [submodule "pack/bundles/start/tree-sitter-just"]
 	path = pack/bundles/start/tree-sitter-just
 	url = https://github.com/IndianBoy42/tree-sitter-just.git
+[submodule "pack/bundles/start/rust-tools.nvim"]
+	path = pack/bundles/start/rust-tools.nvim
+	url = https://github.com/simrat39/rust-tools.nvim
