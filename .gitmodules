@@ -162,3 +162,6 @@
 [submodule "pack/bundles/start/rust-tools.nvim"]
 	path = pack/bundles/start/rust-tools.nvim
 	url = https://github.com/simrat39/rust-tools.nvim
+[submodule "pack/bundles/start/nvim-ts-rainbow2"]
+	path = pack/bundles/start/nvim-ts-rainbow2
+	url = https://github.com/HiPhish/nvim-ts-rainbow2
