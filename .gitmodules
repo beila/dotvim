@@ -46,7 +46,7 @@
 [submodule "bundle/vim-gitgutter"]
 	path = pack/bundles/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
-	branch = master
+	branch = main
 	ignore = all
 [submodule "bundle/SrcExpl"]
 	path = pack/bundles/start/SrcExpl
