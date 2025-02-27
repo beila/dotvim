@@ -3,10 +3,4 @@ require 'nvim-treesitter.configs'.setup {
     auto_install = true,
     highlight = { enable = true, },
     indent = { enable = true, },
-    -- https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/#4-install-tree-sitter-and-set-it-up-with-the-tree-sitter-rust-parser
-    rainbow = {
-        enable = true,
-        extended_mode = true,
-        max_file_lines = nil,
-    },
 }
