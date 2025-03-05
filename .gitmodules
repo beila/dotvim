@@ -162,3 +162,6 @@
 [submodule "pack/bundles/start/rust-tools.nvim"]
 	path = pack/bundles/start/rust-tools.nvim
 	url = https://github.com/simrat39/rust-tools.nvim
+[submodule "pack/bundles/start/tree-sitter-cmake"]
+	path = pack/bundles/start/tree-sitter-cmake
+	url = https://github.com/uyha/tree-sitter-cmake.git
