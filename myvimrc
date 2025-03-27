@@ -123,9 +123,6 @@ augroup remember_folds
   autocmd BufWinEnter * silent! loadview
 augroup END
 
-" https://vim.fandom.com/wiki/Saving_a_file
-map <Esc><Esc> :wa<CR>
-
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#using-the-leader
 "nnoremap <leader>ev <C-w><C-s>:e $MYVIMRC<cr>
 nnoremap <leader>ev :split +e $MYVIMRC<cr>
