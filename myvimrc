@@ -127,15 +127,6 @@ augroup END
 "nnoremap <leader>ev <C-w><C-s>:e $MYVIMRC<cr>
 nnoremap <leader>ev :split +e $MYVIMRC<cr>
 
-" http://www.bestofvim.com/tip/auto-reload-your-vimrc/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+bestOfVim+%28%3Abest+of+Vim%29
-augroup reload_vimrc " {
-    autocmd!
-    autocmd BufWritePost $MYVIMRC source $MYVIMRC
-    autocmd BufWritePost ~/.vim/* source $MYVIMRC
-    autocmd BufWritePost ~/.dotfiles/vim.symlink/* source $MYVIMRC
-    autocmd BufWritePost ~/.dotfiles/vim.symlink/vimrcs/* source $MYVIMRC
-augroup END " }
-
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#quicker-escaping
 inoremap hh <ESC>hh
 inoremap jj <ESC>jj
