@@ -3,3 +3,4 @@ tags
 *.un~
 .netrwhist
 /view/
+/pack/local/
