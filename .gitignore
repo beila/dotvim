@@ -1,0 +1,5 @@
+*.swp
+tags
+*.un~
+.netrwhist
+/view/

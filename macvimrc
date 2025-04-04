@@ -1,0 +1,4 @@
+"set guifont=Menlo_Bold_for_Powerline:h12
+"set guifont=Ubuntu_Mono_derivative_Powerline:h12
+set guifont=FiraMonoForPowerline-Regular:h13
+"autocmd VimEnter * :macaction performZoom:
