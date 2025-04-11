@@ -166,8 +166,11 @@
 	path = pack/bundles/start/tree-sitter-cmake
 	url = https://github.com/uyha/tree-sitter-cmake.git
 [submodule "pack/bundles/opt/nvim-dap"]
-	path = pack/bundles/opt/nvim-dap
+	path = pack/bundles/start/nvim-dap
 	url = https://github.com/mfussenegger/nvim-dap.git
 [submodule "pack/bundles/opt/nvim-dap-ui"]
-	path = pack/bundles/opt/nvim-dap-ui
+	path = pack/bundles/start/nvim-dap-ui
 	url = https://github.com/rcarriga/nvim-dap-ui.git
+[submodule "pack/bundles/start/nvim-nio"]
+	path = pack/bundles/start/nvim-nio
+	url = https://github.com/nvim-neotest/nvim-nio
