@@ -9,6 +9,8 @@ dap.adapters.codelldb = {
   -- detached = false,
 }
 
+-- https://github.com/mfussenegger/nvim-dap/wiki/C-C---Rust-(via--codelldb)#user-content-configuration
+
 local dap = require('dap')
 dap.configurations.cpp = {
   {
@@ -22,3 +24,6 @@ dap.configurations.cpp = {
     stopOnEntry = false,
   },
 }
+
+dap.configurations.c = dap.configurations.cpp
+dap.configurations.rust = dap.configurations.cpp
