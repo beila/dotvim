@@ -92,10 +92,6 @@
 [submodule "bundle/vim-rhubarb"]
 	path = pack/bundles/start/vim-rhubarb
 	url = https://github.com/tpope/vim-rhubarb.git
-[submodule "bundle/vim-cmake-help"]
-	path = pack/bundles/start/vim-cmake-help
-	url = https://github.com/bfrg/vim-cmake-help
-	branch = master
 [submodule "bundle/vim-jinja"]
 	path = pack/bundles/start/vim-jinja
 	url = https://github.com/lepture/vim-jinja.git
