@@ -170,3 +170,6 @@
 [submodule "pack/bundles/start/nvim-nio"]
 	path = pack/bundles/start/nvim-nio
 	url = https://github.com/nvim-neotest/nvim-nio
+[submodule "pack/bundles/start/nvim-dap-python"]
+	path = pack/bundles/start/nvim-dap-python
+	url = https://github.com/mfussenegger/nvim-dap-python.git
