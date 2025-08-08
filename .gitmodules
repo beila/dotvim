@@ -173,3 +173,6 @@
 [submodule "pack/bundles/start/nvim-dap-python"]
 	path = pack/bundles/start/nvim-dap-python
 	url = https://github.com/mfussenegger/nvim-dap-python.git
+[submodule "pack/bundles/start/nvim-dap-vscode-js"]
+	path = pack/bundles/start/nvim-dap-vscode-js
+	url = https://github.com/mxsdev/nvim-dap-vscode-js.git
