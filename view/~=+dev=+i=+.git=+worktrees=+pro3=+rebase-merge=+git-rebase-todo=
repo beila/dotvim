@@ -146,11 +146,11 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 2 - ((1 * winheight(0) + 30) / 60)
+let s:l = 4 - ((3 * winheight(0) + 30) / 60)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 2
+keepjumps 4
 normal! 0
 lcd ~/dev/i/.git/worktrees/pro3/rebase-merge
 let &g:so = s:so_save | let &g:siso = s:siso_save
