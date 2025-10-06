@@ -4,16 +4,16 @@ let s:cpo_save=&cpo
 set cpo&vim
 cmap <buffer> <nowait> <C-R><C-F> <Plug><cfile>
 cnoremap <buffer> <expr> <Plug><cfile> fugitive#MessageCfile()
-xmap <buffer> 'hs <Plug>(GitGutterStageHunk)
-nmap <buffer> 'hs <Plug>(GitGutterStageHunk)
-nmap <buffer> 'hu <Plug>(GitGutterUndoHunk)
 nmap <buffer> 'hp <Plug>(GitGutterPreviewHunk)
+nmap <buffer> 'hu <Plug>(GitGutterUndoHunk)
+nmap <buffer> 'hs <Plug>(GitGutterStageHunk)
+xmap <buffer> 'hs <Plug>(GitGutterStageHunk)
 nmap <buffer> [c <Plug>(GitGutterPrevHunk)
 nmap <buffer> ]c <Plug>(GitGutterNextHunk)
-omap <buffer> ac <Plug>(GitGutterTextObjectOuterPending)
 xmap <buffer> ac <Plug>(GitGutterTextObjectOuterVisual)
-omap <buffer> ic <Plug>(GitGutterTextObjectInnerPending)
+omap <buffer> ac <Plug>(GitGutterTextObjectOuterPending)
 xmap <buffer> ic <Plug>(GitGutterTextObjectInnerVisual)
+omap <buffer> ic <Plug>(GitGutterTextObjectInnerPending)
 cmap <buffer> <nowait>  <Plug><cfile>
 let &cpo=s:cpo_save
 unlet s:cpo_save
@@ -149,7 +149,7 @@ if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 3
-normal! 012|
+normal! 0
 lcd ~/dev/i/.git/worktrees/dev2
 let &g:so = s:so_save | let &g:siso = s:siso_save
 nohlsearch
