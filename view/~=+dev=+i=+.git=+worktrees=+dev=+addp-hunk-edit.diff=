@@ -141,12 +141,12 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 7 - ((6 * winheight(0) + 30) / 60)
+let s:l = 15 - ((14 * winheight(0) + 30) / 60)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 7
-normal! 0
+keepjumps 15
+normal! 02|
 lcd ~/dev/i/.git/worktrees/dev
 let &g:so = s:so_save | let &g:siso = s:siso_save
 nohlsearch
