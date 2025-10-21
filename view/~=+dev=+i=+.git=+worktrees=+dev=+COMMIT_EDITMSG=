@@ -149,7 +149,7 @@ if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 1
-normal! 033|
+normal! 017|
 lcd ~/dev/i/.git/worktrees/dev
 let &g:so = s:so_save | let &g:siso = s:siso_save
 nohlsearch
