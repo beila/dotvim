@@ -10,4 +10,7 @@ let &efm .= ',%Z' . 'Call Stack (most recent call first):'
 " Continuation is message
 let &efm .= ',%C' . ' %m'
 
-nmap <leader>C yyP:.s/"/\\"/<Enter>Imessage(STATUS "<Esc>A")<Esc>==
+augroup mycmakeautocommands
+    autocmd FileType cmake nmap <leader>C yyP:.s/"/\\"/<Enter>Imessage(STATUS "<Esc>A")<Esc>==
+    autocmd FileType cmake setlocal iskeyword+=-
+augroup END

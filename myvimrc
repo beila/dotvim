@@ -100,7 +100,6 @@ augroup myautocommands
     " http://www.bestofvim.com/tip/better-commit-messages/
     autocmd FileType gitcommit setlocal spell
     autocmd FileType markdown setlocal spell
-    autocmd FileType cmake setlocal iskeyword+=-
 
     "autocmd FileType python setlocal foldmethod=indent
 augroup END
