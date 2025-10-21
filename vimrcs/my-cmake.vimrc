@@ -11,6 +11,6 @@ let &efm .= ',%Z' . 'Call Stack (most recent call first):'
 let &efm .= ',%C' . ' %m'
 
 augroup mycmakeautocommands
-    autocmd FileType cmake nmap <buffer> <leader>C yyP:let my_save_search = @/<Enter>:s,",\\",en<Enter>:let @/ = my_save_search<Enter>Imessage(STATUS "<Esc>A")<Esc>
+    autocmd FileType cmake nmap <buffer> <leader>C yyP:let my_save_search = @/<Enter>:s/"/\\"/e<Enter>:let @/ = my_save_search<Enter>Imessage(STATUS "<Esc>A")<Esc>==j
     autocmd FileType cmake setlocal iskeyword+=-
 augroup END
