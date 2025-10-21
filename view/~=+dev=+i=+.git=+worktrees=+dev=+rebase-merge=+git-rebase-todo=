@@ -4,17 +4,17 @@ nnoremap <buffer> <silent>  :=v:count1Cycle
 nnoremap <buffer> <silent>  :=v:count1Cycle!
 let s:cpo_save=&cpo
 set cpo&vim
-xmap <buffer> 'hs <Plug>(GitGutterStageHunk)
-nmap <buffer> 'hs <Plug>(GitGutterStageHunk)
-nmap <buffer> 'hu <Plug>(GitGutterUndoHunk)
 nmap <buffer> 'hp <Plug>(GitGutterPreviewHunk)
+nmap <buffer> 'hu <Plug>(GitGutterUndoHunk)
+nmap <buffer> 'hs <Plug>(GitGutterStageHunk)
+xmap <buffer> 'hs <Plug>(GitGutterStageHunk)
 nnoremap <buffer> <expr> K col('.') < 7 && expand('<cword>') =~ '\X' && getline('.') =~ '^\w\+\s\+\x\+\>' ? 'wK' : 'K'
 nmap <buffer> [c <Plug>(GitGutterPrevHunk)
 nmap <buffer> ]c <Plug>(GitGutterNextHunk)
-omap <buffer> ac <Plug>(GitGutterTextObjectOuterPending)
 xmap <buffer> ac <Plug>(GitGutterTextObjectOuterVisual)
-omap <buffer> ic <Plug>(GitGutterTextObjectInnerPending)
+omap <buffer> ac <Plug>(GitGutterTextObjectOuterPending)
 xmap <buffer> ic <Plug>(GitGutterTextObjectInnerVisual)
+omap <buffer> ic <Plug>(GitGutterTextObjectInnerPending)
 nnoremap <buffer> <silent> <C-X> :=v:count1Cycle!
 nnoremap <buffer> <silent> <C-A> :=v:count1Cycle
 let &cpo=s:cpo_save
@@ -151,7 +151,7 @@ if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 6
-normal! 0
+normal! 010|
 lcd ~/dev/i/.git/worktrees/dev/rebase-merge
 let &g:so = s:so_save | let &g:siso = s:siso_save
 nohlsearch
