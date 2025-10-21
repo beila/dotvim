@@ -4,17 +4,17 @@ nnoremap <buffer> <silent>  :=v:count1Cycle
 nnoremap <buffer> <silent>  :=v:count1Cycle!
 let s:cpo_save=&cpo
 set cpo&vim
-nmap <buffer> 'hp <Plug>(GitGutterPreviewHunk)
-nmap <buffer> 'hu <Plug>(GitGutterUndoHunk)
-nmap <buffer> 'hs <Plug>(GitGutterStageHunk)
 xmap <buffer> 'hs <Plug>(GitGutterStageHunk)
+nmap <buffer> 'hs <Plug>(GitGutterStageHunk)
+nmap <buffer> 'hu <Plug>(GitGutterUndoHunk)
+nmap <buffer> 'hp <Plug>(GitGutterPreviewHunk)
 nnoremap <buffer> <expr> K col('.') < 7 && expand('<cword>') =~ '\X' && getline('.') =~ '^\w\+\s\+\x\+\>' ? 'wK' : 'K'
 nmap <buffer> [c <Plug>(GitGutterPrevHunk)
 nmap <buffer> ]c <Plug>(GitGutterNextHunk)
-xmap <buffer> ac <Plug>(GitGutterTextObjectOuterVisual)
 omap <buffer> ac <Plug>(GitGutterTextObjectOuterPending)
-xmap <buffer> ic <Plug>(GitGutterTextObjectInnerVisual)
+xmap <buffer> ac <Plug>(GitGutterTextObjectOuterVisual)
 omap <buffer> ic <Plug>(GitGutterTextObjectInnerPending)
+xmap <buffer> ic <Plug>(GitGutterTextObjectInnerVisual)
 nnoremap <buffer> <silent> <C-X> :=v:count1Cycle!
 nnoremap <buffer> <silent> <C-A> :=v:count1Cycle
 let &cpo=s:cpo_save
@@ -146,11 +146,11 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 3 - ((2 * winheight(0) + 68) / 137)
+let s:l = 4 - ((3 * winheight(0) + 68) / 137)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 3
+keepjumps 4
 normal! 0
 lcd ~/dev/i/.git/worktrees/dev/rebase-merge
 let &g:so = s:so_save | let &g:siso = s:siso_save
