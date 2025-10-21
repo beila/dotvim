@@ -151,7 +151,7 @@ if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 7
-normal! 02|
+normal! 0
 lcd ~/dev/i/.git/worktrees/dev/rebase-merge
 let &g:so = s:so_save | let &g:siso = s:siso_save
 nohlsearch
