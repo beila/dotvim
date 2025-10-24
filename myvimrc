@@ -102,6 +102,8 @@ augroup myautocommands
     autocmd FileType markdown setlocal spell
 
     "autocmd FileType python setlocal foldmethod=indent
+
+    autocmd VimResized * wincmd =   " same as ctrl-W = to resize the windows
 augroup END
 
 if has("gui_running")
