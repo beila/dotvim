@@ -146,12 +146,12 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 3 - ((2 * winheight(0) + 68) / 136)
+let s:l = 10 - ((9 * winheight(0) + 29) / 59)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 3
-normal! 020|
+keepjumps 10
+normal! 0
 lcd ~/dev/i/.git/worktrees/dev/rebase-merge
 let &g:so = s:so_save | let &g:siso = s:siso_save
 nohlsearch
