@@ -26,6 +26,8 @@ map <c-h> <c-w>h
 
 map <a-tab> gt
 map <a-s-tab> gT
+map <c-tab> gt
+map <c-s-tab> gT
 
 nnoremap gq <c-w>c
 
@@ -137,7 +139,7 @@ nnoremap <leader>ev :split +e $MYVIMRC<cr>
 
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#quicker-escaping
 inoremap hh <ESC>hh
-inoremap jj <ESC>jj
+inoremap jjj <ESC>jjj
 inoremap kk <ESC>kk
 inoremap lll <ESC>lll
 inoremap bb <ESC>bb
